@@ -3,380 +3,142 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Abdelhak Saket — Senior RPA & Intelligent Automation Architect. Expert UiPath, Blue Prism, Agentic AI. 12 ans d'expérience, 2M€ ROI.">
-<title>Abdelhak Saket — RPA & Intelligent Automation Architect</title>
+<meta name="description" content="Abdelhak Saket — Consultant Senior RPA & Intelligent Automation. Expert UiPath Advanced, Blue Prism AD01. 12 ans grands comptes banque/assurance.">
+<title>Abdelhak Saket — Consultant Senior RPA & Intelligent Automation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ── TOKENS ────────────────────────────────────────────────────────────── */
 :root {
-  --bg:       #060810;
-  --bg2:      #0a0d18;
-  --bg3:      #0f1424;
-  --surface:  #131929;
-  --surface2: #1a2236;
-  --border:   rgba(0,210,255,0.12);
-  --border2:  rgba(0,210,255,0.25);
-  --cyan:     #00d2ff;
-  --cyan2:    #00a8cc;
-  --gold:     #f0b429;
-  --white:    #e8eeff;
-  --muted:    #6b7fa3;
-  --muted2:   #8b9ec0;
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body:    'Geist', system-ui, sans-serif;
-  --font-mono:    'DM Mono', monospace;
-  --radius:   10px;
-  --radius-lg:18px;
+  --bg:#060810;--bg2:#0a0d18;--bg3:#0f1424;
+  --surface:#131929;--surface2:#1a2236;
+  --border:rgba(0,168,204,0.12);--border2:rgba(0,168,204,0.22);
+  --cyan:#00a8cc;--cyan2:#007fa0;--white:#e8eeff;
+  --muted:#6b7fa3;--muted2:#8b9ec0;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Geist',system-ui,sans-serif;
+  --font-mono:'DM Mono',monospace;
+  --radius:10px;--radius-lg:16px;
 }
-
-/* ── RESET ─────────────────────────────────────────────────────────────── */
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--font-body);background:var(--bg);color:var(--white);min-height:100vh;overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-img{max-width:100%}
 ul{list-style:none}
-
-/* ── GRID BACKGROUND ───────────────────────────────────────────────────── */
-body::before {
-  content:'';
-  position:fixed;inset:0;z-index:0;
-  background-image:
-    linear-gradient(rgba(0,210,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,210,255,0.03) 1px, transparent 1px);
-  background-size:60px 60px;
-  pointer-events:none;
-}
-body::after {
-  content:'';
-  position:fixed;inset:0;z-index:0;
-  background:radial-gradient(ellipse 80% 60% at 20% 10%, rgba(0,210,255,0.05) 0%, transparent 60%),
-             radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0,100,200,0.06) 0%, transparent 60%);
-  pointer-events:none;
-}
-
-/* ── LAYOUT ────────────────────────────────────────────────────────────── */
-.container{max-width:1100px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+body::before{content:'';position:fixed;inset:0;z-index:0;
+  background-image:linear-gradient(rgba(0,168,204,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,168,204,0.025) 1px,transparent 1px);
+  background-size:60px 60px;pointer-events:none;}
+.container{max-width:1060px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
 section{padding:5rem 0}
-
-/* ── NAV ───────────────────────────────────────────────────────────────── */
-nav {
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:1.1rem 2rem;
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(6,8,16,0.8);
-  backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--border);
-}
-.nav-logo {
-  font-family:var(--font-mono);font-size:0.85rem;color:var(--cyan);letter-spacing:0.05em;
-}
-.nav-links {
-  display:flex;gap:2rem;
-}
-.nav-links a {
-  font-size:0.82rem;color:var(--muted);letter-spacing:0.04em;transition:color 0.2s;
-  font-family:var(--font-mono);
-}
-.nav-links a:hover{color:var(--cyan)}
-.nav-cta {
-  padding:0.5rem 1.2rem;border:1px solid var(--border2);border-radius:6px;
-  font-size:0.82rem;font-family:var(--font-mono);color:var(--cyan);
-  transition:all 0.2s;cursor:pointer;background:transparent;
-}
-.nav-cta:hover{background:rgba(0,210,255,0.08)}
-
-/* ── HERO ──────────────────────────────────────────────────────────────── */
-#hero {
-  min-height:100vh;display:flex;align-items:center;
-  padding-top:80px;position:relative;
-}
-.hero-inner {
-  display:grid;grid-template-columns:1fr 420px;gap:4rem;align-items:center;
-}
-.hero-label {
-  font-family:var(--font-mono);font-size:0.75rem;color:var(--cyan);
-  letter-spacing:0.15em;text-transform:uppercase;
-  margin-bottom:1.4rem;display:flex;align-items:center;gap:10px;
-}
-.hero-label::before{content:'';width:32px;height:1px;background:var(--cyan)}
-.hero-name {
-  font-family:var(--font-display);
-  font-size:clamp(3rem,6vw,5.2rem);
-  font-weight:700;line-height:1.02;
-  margin-bottom:0.8rem;
-  letter-spacing:-0.02em;
-}
-.hero-name em {
-  font-style:italic;font-weight:300;color:var(--cyan);
-}
-.hero-title {
-  font-size:1.05rem;color:var(--muted2);
-  font-weight:300;line-height:1.6;margin-bottom:2.5rem;
-  max-width:520px;
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;background:rgba(6,8,16,0.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--font-mono);font-size:0.82rem;color:var(--muted2);letter-spacing:0.04em}
+.nav-logo span{color:var(--cyan)}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{font-size:0.8rem;color:var(--muted);font-family:var(--font-mono);transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{padding:0.45rem 1.1rem;border:1px solid var(--border2);border-radius:6px;font-size:0.8rem;font-family:var(--font-mono);color:var(--muted2);transition:all 0.2s;background:transparent;cursor:pointer}
+.nav-cta:hover{color:var(--white);border-color:rgba(0,168,204,0.4)}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:80px}
+.hero-inner{display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:center}
+.hero-label{font-family:var(--font-mono);font-size:0.72rem;color:var(--cyan);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.2rem;display:flex;align-items:center;gap:10px}
+.hero-label::before{content:'';width:28px;height:1px;background:var(--cyan);opacity:0.6}
+.hero-name{font-family:var(--font-display);font-size:clamp(2.8rem,5.5vw,4.8rem);font-weight:700;line-height:1.03;margin-bottom:0.8rem;letter-spacing:-0.02em}
+.hero-name em{font-style:italic;font-weight:300;color:var(--cyan)}
+.hero-title{font-size:1rem;color:var(--muted2);font-weight:300;line-height:1.7;margin-bottom:2rem;max-width:500px}
 .hero-title strong{color:var(--white);font-weight:500}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn {
-  padding:0.75rem 1.8rem;border-radius:8px;
-  font-family:var(--font-mono);font-size:0.85rem;
-  cursor:pointer;transition:all 0.25s;border:none;letter-spacing:0.03em;
-}
+.hero-actions{display:flex;gap:0.8rem;flex-wrap:wrap}
+.btn{padding:0.65rem 1.5rem;border-radius:7px;font-family:var(--font-mono);font-size:0.8rem;cursor:pointer;transition:all 0.2s;border:none;letter-spacing:0.03em}
+.btn-ghost{background:transparent;color:var(--muted2);border:1px solid var(--border2)}
+.btn-ghost:hover{border-color:rgba(0,168,204,0.4);color:var(--white)}
 .btn-primary{background:var(--cyan);color:var(--bg);font-weight:500}
-.btn-primary:hover{background:#33deff;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,210,255,0.3)}
-.btn-ghost{background:transparent;color:var(--white);border:1px solid var(--border2)}
-.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);background:rgba(0,210,255,0.05)}
-
-/* Hero metrics card */
-.hero-metrics {
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  padding:2rem;
-  position:relative;overflow:hidden;
-}
-.hero-metrics::before {
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent,var(--cyan),transparent);
-}
-.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.metric-item{text-align:center}
-.metric-value {
-  font-family:var(--font-display);
-  font-size:2.4rem;font-weight:700;
-  color:var(--cyan);line-height:1;margin-bottom:0.4rem;
-  letter-spacing:-0.02em;
-}
-.metric-value.gold{color:var(--gold)}
-.metric-label{font-size:0.72rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;font-family:var(--font-mono)}
-.metric-divider{border:none;border-top:1px solid var(--border);margin:1.5rem 0}
-.tech-stack{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1rem}
-.tech-pill {
-  padding:4px 10px;border-radius:4px;
-  font-size:0.7rem;font-family:var(--font-mono);
-  background:rgba(0,210,255,0.07);color:var(--cyan2);
-  border:1px solid rgba(0,210,255,0.15);
-  transition:all 0.2s;
-}
-.tech-pill:hover{background:rgba(0,210,255,0.14);border-color:var(--cyan)}
-
-/* scroll indicator */
-.scroll-hint {
-  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-  font-family:var(--font-mono);font-size:0.7rem;color:var(--muted);
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  animation:bob 2s ease-in-out infinite;
-}
-@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--cyan),transparent)}
-
-/* ── SECTION HEADERS ───────────────────────────────────────────────────── */
-.section-tag {
-  font-family:var(--font-mono);font-size:0.72rem;color:var(--cyan);
-  letter-spacing:0.15em;text-transform:uppercase;
-  margin-bottom:0.8rem;display:flex;align-items:center;gap:10px;
-}
-.section-tag::before{content:'';width:24px;height:1px;background:var(--cyan)}
-.section-title {
-  font-family:var(--font-display);
-  font-size:clamp(2rem,4vw,2.8rem);
-  font-weight:600;line-height:1.1;
-  margin-bottom:1rem;letter-spacing:-0.02em;
-}
+.btn-primary:hover{background:#00c0e0;transform:translateY(-1px)}
+.hero-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.8rem}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.metric-item{text-align:center;padding:0.8rem;background:var(--surface2);border-radius:8px}
+.metric-value{font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--cyan);line-height:1;margin-bottom:0.35rem}
+.metric-value.neutral{color:var(--white)}
+.metric-label{font-size:0.67rem;color:var(--muted);letter-spacing:0.07em;text-transform:uppercase;font-family:var(--font-mono)}
+.card-divider{border:none;border-top:1px solid var(--border);margin:1.2rem 0}
+.stack-label{font-size:0.67rem;color:var(--muted);font-family:var(--font-mono);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.7rem}
+.tech-stack{display:flex;flex-wrap:wrap;gap:0.4rem}
+.tech-pill{padding:3px 9px;border-radius:4px;font-size:0.68rem;font-family:var(--font-mono);background:rgba(0,168,204,0.07);color:var(--muted2);border:1px solid rgba(0,168,204,0.12)}
+.section-tag{font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:0.7rem;display:flex;align-items:center;gap:10px}
+.section-tag::before{content:'';width:20px;height:1px;background:var(--cyan);opacity:0.6}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:600;line-height:1.1;margin-bottom:0.9rem;letter-spacing:-0.02em}
 .section-title em{font-style:italic;font-weight:300;color:var(--cyan)}
-.section-desc{color:var(--muted2);max-width:560px;line-height:1.7;font-size:0.95rem}
-
-/* ── ABOUT ─────────────────────────────────────────────────────────────── */
-#about .about-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem;
-}
-.about-text p{
-  color:var(--muted2);line-height:1.85;font-size:0.95rem;margin-bottom:1.2rem;
-}
+.section-desc{color:var(--muted2);max-width:540px;line-height:1.7;font-size:0.92rem}
+#about .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;margin-top:2.5rem}
+.about-text p{color:var(--muted2);line-height:1.85;font-size:0.92rem;margin-bottom:1.1rem}
 .about-text p strong{color:var(--white);font-weight:500}
-.certif-list{display:flex;flex-direction:column;gap:0.6rem;margin-top:2rem}
-.certif-item {
-  display:flex;align-items:center;gap:12px;
-  padding:0.75rem 1rem;
-  background:var(--surface);border:1px solid var(--border);border-radius:8px;
-  font-size:0.82rem;transition:border-color 0.2s;
-}
+.certif-list{display:flex;flex-direction:column;gap:0.5rem;margin-top:0.5rem}
+.certif-item{display:flex;align-items:center;gap:10px;padding:0.65rem 0.9rem;background:var(--surface);border:1px solid var(--border);border-radius:7px;font-size:0.8rem;transition:border-color 0.2s}
 .certif-item:hover{border-color:var(--border2)}
-.certif-badge {
-  width:28px;height:28px;border-radius:6px;
-  background:linear-gradient(135deg,rgba(0,210,255,0.2),rgba(0,100,200,0.2));
-  border:1px solid var(--border2);
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.7rem;color:var(--cyan);font-weight:700;font-family:var(--font-mono);
-  flex-shrink:0;
-}
-.certif-name{color:var(--white);font-weight:500}
-.certif-org{color:var(--muted);font-size:0.75rem;margin-top:2px;font-family:var(--font-mono)}
-
-/* ── EXPERIENCE TIMELINE ───────────────────────────────────────────────── */
+.certif-badge{width:26px;height:26px;border-radius:5px;background:rgba(0,168,204,0.1);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:0.62rem;color:var(--cyan);font-weight:600;font-family:var(--font-mono);flex-shrink:0}
+.certif-name{color:var(--white);font-weight:500;font-size:0.8rem}
+.certif-org{color:var(--muted);font-size:0.7rem;margin-top:1px;font-family:var(--font-mono)}
 #experience{background:var(--bg2)}
-.timeline{margin-top:3rem;position:relative}
-.timeline::before {
-  content:'';position:absolute;left:0;top:0;bottom:0;
-  width:1px;background:linear-gradient(to bottom,transparent,var(--border2) 10%,var(--border2) 90%,transparent);
-}
-.tl-item {
-  position:relative;padding-left:2.5rem;margin-bottom:2.5rem;
-  opacity:0;transform:translateY(20px);transition:all 0.5s ease;
-}
+.tl-intro{display:flex;gap:1rem;margin:2rem 0 2.5rem;flex-wrap:wrap}
+.tl-intro-stat{font-family:var(--font-mono);font-size:0.75rem;color:var(--muted2);padding:0.45rem 0.9rem;background:var(--surface);border:1px solid var(--border);border-radius:6px}
+.tl-intro-stat span{color:var(--cyan);font-weight:500}
+.timeline{position:relative}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--border2) 10%,var(--border2) 90%,transparent)}
+.tl-item{position:relative;padding-left:2.2rem;margin-bottom:2rem;opacity:0;transform:translateY(16px);transition:all 0.45s ease}
 .tl-item.visible{opacity:1;transform:translateY(0)}
-.tl-dot {
-  position:absolute;left:-5px;top:6px;
-  width:10px;height:10px;border-radius:50%;
-  background:var(--bg);border:2px solid var(--cyan);
-  box-shadow:0 0 12px rgba(0,210,255,0.5);
-}
-.tl-card {
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);
-  padding:1.6rem 2rem;transition:border-color 0.25s,transform 0.25s;
-}
-.tl-card:hover{border-color:var(--border2);transform:translateX(4px)}
-.tl-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;flex-wrap:wrap;gap:0.5rem}
-.tl-role{font-weight:600;font-size:1rem;color:var(--white)}
-.tl-period {
-  font-family:var(--font-mono);font-size:0.72rem;color:var(--cyan);
-  padding:3px 10px;background:rgba(0,210,255,0.08);border-radius:4px;
-  border:1px solid rgba(0,210,255,0.2);white-space:nowrap;
-}
-.tl-company{font-size:0.85rem;color:var(--muted2);margin-bottom:1rem;font-family:var(--font-mono)}
-.tl-desc{font-size:0.88rem;color:var(--muted2);line-height:1.7;margin-bottom:1rem}
-.tl-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1rem}
-.tl-tag {
-  font-size:0.68rem;padding:3px 9px;border-radius:4px;font-family:var(--font-mono);
-  background:rgba(240,180,41,0.08);color:#c8972c;border:1px solid rgba(240,180,41,0.15);
-}
-.tl-results {
-  display:flex;gap:1rem;flex-wrap:wrap;padding-top:0.8rem;
-  border-top:1px solid var(--border);
-}
-.tl-result {
-  display:flex;align-items:center;gap:6px;font-size:0.78rem;
-}
+.tl-dot{position:absolute;left:-4px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--bg);border:1.5px solid var(--cyan)}
+.tl-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem 1.8rem;transition:border-color 0.2s,transform 0.2s}
+.tl-card:hover{border-color:var(--border2);transform:translateX(3px)}
+.tl-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.3rem;flex-wrap:wrap;gap:0.5rem}
+.tl-role{font-weight:600;font-size:0.95rem;color:var(--white)}
+.tl-period{font-family:var(--font-mono);font-size:0.68rem;color:var(--muted2);padding:2px 8px;background:var(--surface2);border-radius:4px;white-space:nowrap}
+.tl-company{font-size:0.8rem;color:var(--muted);margin-bottom:0.8rem;font-family:var(--font-mono)}
+.tl-desc{font-size:0.86rem;color:var(--muted2);line-height:1.7;margin-bottom:0.9rem}
+.tl-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-bottom:0.9rem}
+.tl-tag{font-size:0.66rem;padding:2px 8px;border-radius:3px;font-family:var(--font-mono);background:var(--surface2);color:var(--muted2);border:1px solid var(--border)}
+.tl-results{display:flex;gap:1.2rem;flex-wrap:wrap;padding-top:0.7rem;border-top:1px solid var(--border)}
+.tl-result{display:flex;align-items:center;gap:5px;font-size:0.76rem}
 .tl-result .val{color:var(--cyan);font-weight:600;font-family:var(--font-mono)}
 .tl-result .lbl{color:var(--muted)}
-
-/* ── SKILLS ─────────────────────────────────────────────────────────────── */
-#skills .skills-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:1.5rem;margin-top:3rem;
-}
-.skill-card {
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:var(--radius-lg);padding:1.6rem;
-  transition:border-color 0.25s,transform 0.25s;
-  opacity:0;transform:translateY(20px);transition:all 0.5s ease;
-}
+.tl-footer{margin-top:2.5rem;padding:1.2rem 1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);font-family:var(--font-mono);font-size:0.78rem;color:var(--muted2);display:flex;gap:2rem;flex-wrap:wrap}
+.tl-footer strong{color:var(--cyan)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem;margin-top:2.5rem}
+.skill-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.4rem;opacity:0;transform:translateY(16px);transition:all 0.45s ease}
 .skill-card.visible{opacity:1;transform:translateY(0)}
-.skill-card:hover{border-color:var(--border2);transform:translateY(-4px)}
-.skill-card-icon{font-size:1.5rem;margin-bottom:0.8rem}
-.skill-card-title{font-weight:600;font-size:0.95rem;margin-bottom:0.3rem}
-.skill-card-desc{font-size:0.8rem;color:var(--muted);margin-bottom:1.2rem;line-height:1.6}
-.skill-bar-wrap{margin-bottom:0.6rem}
-.skill-bar-header{display:flex;justify-content:space-between;margin-bottom:0.35rem}
-.skill-bar-name{font-size:0.78rem;color:var(--muted2);font-family:var(--font-mono)}
-.skill-bar-pct{font-size:0.72rem;color:var(--cyan);font-family:var(--font-mono)}
-.skill-bar-bg{height:3px;background:var(--surface2);border-radius:2px;overflow:hidden}
-.skill-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--cyan2),var(--cyan));width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
-
-/* ── CLIENTS ────────────────────────────────────────────────────────────── */
+.skill-card:hover{border-color:var(--border2)}
+.skill-card-header{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.skill-card-icon{font-size:1.1rem}
+.skill-card-title{font-weight:600;font-size:0.88rem}
+.skill-bar-wrap{margin-bottom:0.55rem}
+.skill-bar-header{display:flex;justify-content:space-between;margin-bottom:0.3rem}
+.skill-bar-name{font-size:0.75rem;color:var(--muted2);font-family:var(--font-mono)}
+.skill-bar-pct{font-size:0.68rem;color:var(--muted);font-family:var(--font-mono)}
+.skill-bar-bg{height:2px;background:var(--surface2);border-radius:1px;overflow:hidden}
+.skill-bar-fill{height:100%;border-radius:1px;background:linear-gradient(90deg,var(--cyan2),var(--cyan));width:0;transition:width 1.1s cubic-bezier(.4,0,.2,1)}
 #clients{background:var(--bg2)}
-.clients-intro{margin-top:3rem;margin-bottom:2.5rem}
-.clients-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;
-}
-.client-card {
-  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
-  padding:1.4rem 1rem;text-align:center;
-  transition:all 0.25s;cursor:default;
-  opacity:0;transform:scale(0.95);transition:all 0.4s ease;
-}
+.clients-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:0.8rem;margin-top:2.5rem}
+.client-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.1rem 0.9rem;text-align:center;opacity:0;transform:scale(0.97);transition:all 0.35s ease}
 .client-card.visible{opacity:1;transform:scale(1)}
-.client-card:hover{border-color:var(--border2);background:var(--surface2);transform:translateY(-3px)}
-.client-sector {
-  font-size:0.65rem;font-family:var(--font-mono);color:var(--muted);
-  letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem;
-}
-.client-name{font-size:0.9rem;font-weight:600;color:var(--white)}
-
-/* ── CONTACT ────────────────────────────────────────────────────────────── */
-#contact {
-  text-align:center;
-  background:var(--bg3);
-  position:relative;overflow:hidden;
-}
-#contact::before {
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse 70% 60% at 50% 100%,rgba(0,210,255,0.07) 0%,transparent 70%);
-}
-.contact-inner{position:relative;z-index:1;max-width:600px;margin:0 auto}
-.contact-cta {
-  display:inline-flex;align-items:center;gap:8px;
-  margin-top:2.5rem;padding:1rem 2.5rem;
-  background:var(--cyan);color:var(--bg);border-radius:8px;
-  font-family:var(--font-mono);font-weight:500;font-size:0.9rem;
-  cursor:pointer;transition:all 0.25s;border:none;
-}
-.contact-cta:hover{background:#33deff;transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,210,255,0.35)}
-.contact-links{display:flex;justify-content:center;gap:2rem;margin-top:2rem}
-.contact-link {
-  display:flex;align-items:center;gap:8px;
-  font-family:var(--font-mono);font-size:0.78rem;color:var(--muted);
-  transition:color 0.2s;padding:0.5rem;
-}
+.client-card:hover{border-color:var(--border2)}
+.client-sector{font-size:0.62rem;font-family:var(--font-mono);color:var(--muted);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:0.3rem}
+.client-name{font-size:0.85rem;font-weight:500;color:var(--white)}
+#contact{text-align:center}
+.contact-inner{max-width:560px;margin:0 auto;position:relative;z-index:1}
+.availability{display:inline-block;margin:1.5rem auto 2rem;padding:0.6rem 1.5rem;background:rgba(0,168,204,0.07);border:1px solid var(--border2);border-radius:6px;font-family:var(--font-mono);font-size:0.78rem;color:var(--muted2)}
+.availability span{color:var(--cyan)}
+.contact-email{display:inline-flex;align-items:center;gap:8px;padding:0.8rem 2rem;background:var(--surface);border:1px solid var(--border2);border-radius:8px;font-family:var(--font-mono);font-size:0.85rem;color:var(--white);transition:all 0.2s;cursor:pointer}
+.contact-email:hover{border-color:var(--cyan);color:var(--cyan)}
+.contact-links{display:flex;justify-content:center;gap:2rem;margin-top:1.5rem}
+.contact-link{display:flex;align-items:center;gap:7px;font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);transition:color 0.2s}
 .contact-link:hover{color:var(--cyan)}
-.contact-link svg{width:16px;height:16px}
-
-/* ── FOOTER ─────────────────────────────────────────────────────────────── */
-footer {
-  border-top:1px solid var(--border);
-  padding:2rem;text-align:center;
-  font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);
-  position:relative;z-index:1;
-}
-
-/* ── ANIMATIONS ─────────────────────────────────────────────────────────── */
-.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.contact-link svg{width:14px;height:14px}
+footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);position:relative;z-index:1}
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease}
 .fade-in.visible{opacity:1;transform:translateY(0)}
-
-/* counter animation */
-@keyframes countup{from{opacity:0}to{opacity:1}}
-
-/* ── MOBILE ─────────────────────────────────────────────────────────────── */
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .hero-metrics{display:none}
-  #about .about-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  .nav-links{display:none}
-  .timeline::before{display:none}
-  .tl-item{padding-left:0}
-  .tl-dot{display:none}
-  section{padding:3.5rem 0}
-}
-
-/* ── CURSOR GLOW ────────────────────────────────────────────────────────── */
-.cursor-glow {
-  width:400px;height:400px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,210,255,0.04) 0%,transparent 70%);
-  position:fixed;pointer-events:none;z-index:0;
-  transform:translate(-50%,-50%);transition:all 0.15s ease;
-}
+@media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-card{display:none}#about .about-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.nav-links{display:none}.timeline::before,.tl-dot{display:none}.tl-item{padding-left:0}section{padding:3.5rem 0}}
 </style>
 </head>
 <body>
-
-<div class="cursor-glow" id="glow"></div>
-
-<!-- NAV -->
 <nav>
-  <span class="nav-logo">AS / portfolio</span>
+  <span class="nav-logo">Abdelhak <span>Saket</span></span>
   <div class="nav-links">
     <a href="#about">Profil</a>
     <a href="#experience">Expériences</a>
@@ -384,449 +146,194 @@ footer {
     <a href="#clients">Clients</a>
     <a href="#contact">Contact</a>
   </div>
-  <a href="mailto:abdelhaksaket@gmail.com" class="nav-cta">Me contacter →</a>
+  <a href="#contact" class="nav-cta">Contact</a>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="container">
     <div class="hero-inner">
       <div>
-        <p class="hero-label">Disponible · Île-de-France · CDI recherché</p>
-        <h1 class="hero-name">
-          Abdelhak<br><em>Saket</em>
-        </h1>
+        <p class="hero-label">Disponible CDI · Île-de-France · Immédiat</p>
+        <h1 class="hero-name">Abdelhak<br><em>Saket</em></h1>
         <p class="hero-title">
-          <strong>Senior RPA & Intelligent Automation Architect.</strong><br>
-          Expert UiPath Advanced Certified — Blue Prism AD01.<br>
-          Je conçois des architectures d'automatisation à <strong>ROI mesurable</strong> pour les grands comptes banque, assurance et industrie.
+          <strong>Consultant Senior RPA &amp; Intelligent Automation.</strong><br>
+          12 ans d'expérience grands comptes banque, assurance, énergie.<br>
+          Expert UiPath Advanced Certified — Blue Prism AD01.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Discutons →</a>
-          <a href="#experience" class="btn btn-ghost">Voir mes missions</a>
+          <a href="#contact" class="btn btn-primary">Contact</a>
+          <a href="#experience" class="btn btn-ghost">Expériences</a>
         </div>
       </div>
-
-      <div class="hero-metrics fade-in">
+      <div class="hero-card fade-in">
         <div class="metric-grid">
-          <div class="metric-item">
-            <div class="metric-value" data-target="12" data-suffix=" ans">0</div>
-            <div class="metric-label">Expérience</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value gold" data-target="2" data-prefix="€" data-suffix="M ROI">0</div>
-            <div class="metric-label">ROI généré</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value" data-target="97" data-suffix="%">0</div>
-            <div class="metric-label">Taux succès robot</div>
-          </div>
-          <div class="metric-item">
-            <div class="metric-value" data-target="20" data-suffix="+">0</div>
-            <div class="metric-label">Processus déployés</div>
-          </div>
+          <div class="metric-item"><div class="metric-value">12 ans</div><div class="metric-label">Expérience</div></div>
+          <div class="metric-item"><div class="metric-value">2 M€</div><div class="metric-label">ROI généré</div></div>
+          <div class="metric-item"><div class="metric-value neutral">97,1%</div><div class="metric-label">Taux succès robot</div></div>
+          <div class="metric-item"><div class="metric-value neutral">20+</div><div class="metric-label">Processus déployés</div></div>
         </div>
-        <hr class="metric-divider">
-        <div style="font-size:0.72rem;color:var(--muted);font-family:var(--font-mono);margin-bottom:0.8rem">STACK PRINCIPAL</div>
+        <hr class="card-divider">
+        <div class="stack-label">Stack principal</div>
         <div class="tech-stack">
           <span class="tech-pill">UiPath Advanced</span>
-          <span class="tech-pill">Blue Prism AD01</span>
-          <span class="tech-pill">LangChain</span>
-          <span class="tech-pill">Agentic AI</span>
-          <span class="tech-pill">FastAPI</span>
-          <span class="tech-pill">MLflow</span>
-          <span class="tech-pill">Azure</span>
+          <span class="tech-pill">Blue Prism</span>
           <span class="tech-pill">Python</span>
+          <span class="tech-pill">Azure</span>
+          <span class="tech-pill">LangChain</span>
           <span class="tech-pill">Document AI</span>
         </div>
       </div>
     </div>
-
-    <div class="scroll-hint">
-      <span>scroll</span>
-      <div class="scroll-line"></div>
-    </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="container">
-    <p class="section-tag fade-in">À propos</p>
-    <h2 class="section-title fade-in">Architecte de <em>l'automatisation</em><br>intelligente</h2>
+    <p class="section-tag fade-in">Profil</p>
+    <h2 class="section-title fade-in">Senior RPA &amp; <em>Intelligent Automation</em></h2>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p>
-          Avec <strong>plus de 12 ans d'expérience</strong> dont 6 années dédiées à la transformation digitale, j'ai conçu et déployé des solutions d'automatisation à forte valeur pour des grands comptes français et internationaux.
-        </p>
-        <p>
-          Je navigue naturellement entre la <strong>dimension fonctionnelle</strong> (recueil des besoins, PDD, pilotage recette) et la <strong>dimension technique</strong> (architecture RPA, développement, MLOps), ce qui me permet de créer le pont entre les équipes métier et IT.
-        </p>
-        <p>
-          Actuellement, je positionne mon expertise vers <strong>l'IA agentique et l'hyperautomation</strong> — l'orchestration de workflows intelligents combinant RPA, LLMs et agents autonomes.
-        </p>
-        <p>
-          Je recherche un poste en <strong>CDI dans la région parisienne</strong>, idéalement chez un client final ou dans le secteur public, où je peux apporter une vision stratégique de l'automatisation.
-        </p>
+        <p>Consultant Senior avec <strong>12 ans d'expérience</strong> dont 6 années dédiées à la transformation digitale et l'automatisation des processus pour les grands comptes. Historique de missions chez <strong>BNP Paribas, Caisse d'Épargne IDF, EDF, Disneyland Paris, GRDF, Carrefour, KPMG, EY</strong>.</p>
+        <p>Double posture <strong>Business Analyst / Tech Lead</strong> : recueil des besoins, rédaction PDD/SDD, pilotage recette — jusqu'au développement, déploiement et MCO. Capable d'intervenir end-to-end sur un projet d'automatisation.</p>
+        <p>En veille active sur <strong>l'IA agentique et l'hyperautomation</strong> (LLMs, RAG, agents autonomes). POC réalisés sur LangChain et AutoGen.</p>
+        <p>Recherche un poste <strong>CDI en Île-de-France</strong>, client final ou secteur public. Ouvert au portage salarial. Disponible immédiatement.</p>
       </div>
       <div class="fade-in">
-        <div style="font-family:var(--font-mono);font-size:0.72rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem">Certifications</div>
+        <div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.9rem">Certifications</div>
         <div class="certif-list">
-          <div class="certif-item">
-            <div class="certif-badge">UI</div>
-            <div>
-              <div class="certif-name">UiPath Advanced RPA Developer</div>
-              <div class="certif-org">UiPath Certified Professional</div>
-            </div>
-          </div>
-          <div class="certif-item">
-            <div class="certif-badge">UI</div>
-            <div>
-              <div class="certif-name">UiPath RPA Business Analyst</div>
-              <div class="certif-org">UiPath Academy</div>
-            </div>
-          </div>
-          <div class="certif-item">
-            <div class="certif-badge">BP</div>
-            <div>
-              <div class="certif-name">Blue Prism Developer AD01</div>
-              <div class="certif-org">Blue Prism Certified</div>
-            </div>
-          </div>
-          <div class="certif-item">
-            <div class="certif-badge">SC</div>
-            <div>
-              <div class="certif-name">Professional Scrum Master I — PSM I</div>
-              <div class="certif-org">Scrum.org</div>
-            </div>
-          </div>
-          <div class="certif-item">
-            <div class="certif-badge">SC</div>
-            <div>
-              <div class="certif-name">Professional Scrum Product Owner — PSPO I</div>
-              <div class="certif-org">Scrum.org</div>
-            </div>
-          </div>
-          <div class="certif-item">
-            <div class="certif-badge">AZ</div>
-            <div>
-              <div class="certif-name">Azure AI-102 — en cours</div>
-              <div class="certif-org">Microsoft Azure</div>
-            </div>
-          </div>
-          <div class="certif-item">
-            <div class="certif-badge">IT</div>
-            <div>
-              <div class="certif-name">ITIL Foundation</div>
-              <div class="certif-org">PeopleCert</div>
-            </div>
-          </div>
+          <div class="certif-item"><div class="certif-badge">UI</div><div><div class="certif-name">UiPath Advanced RPA Developer</div><div class="certif-org">UiPath Certified Professional</div></div></div>
+          <div class="certif-item"><div class="certif-badge">UI</div><div><div class="certif-name">UiPath RPA Business Analyst</div><div class="certif-org">UiPath Academy</div></div></div>
+          <div class="certif-item"><div class="certif-badge">BP</div><div><div class="certif-name">Blue Prism Developer AD01</div><div class="certif-org">Blue Prism Certified</div></div></div>
+          <div class="certif-item"><div class="certif-badge">SC</div><div><div class="certif-name">PSM I — Professional Scrum Master</div><div class="certif-org">Scrum.org</div></div></div>
+          <div class="certif-item"><div class="certif-badge">SC</div><div><div class="certif-name">PSPO I — Professional Scrum PO</div><div class="certif-org">Scrum.org</div></div></div>
+          <div class="certif-item"><div class="certif-badge">AZ</div><div><div class="certif-name">Azure AI-102 — en cours</div><div class="certif-org">Microsoft Azure</div></div></div>
+          <div class="certif-item"><div class="certif-badge">IT</div><div><div class="certif-name">ITIL Foundation</div><div class="certif-org">PeopleCert</div></div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="container">
     <p class="section-tag fade-in">Parcours</p>
-    <h2 class="section-title fade-in">Missions & <em>réalisations</em></h2>
-    <p class="section-desc fade-in">Chaque mission, un projet livré. Chaque projet, des résultats mesurables.</p>
-
+    <h2 class="section-title fade-in">Missions &amp; <em>réalisations</em></h2>
+    <p class="section-desc fade-in">12 ans · Grands comptes banque, assurance, énergie, audit, retail</p>
+    <div class="tl-intro fade-in">
+      <div class="tl-intro-stat">Banque/Assurance : <span>BNP · CEIDF · EDF</span></div>
+      <div class="tl-intro-stat">Audit : <span>EY · KPMG</span></div>
+      <div class="tl-intro-stat">Retail/Énergie : <span>Carrefour · GRDF</span></div>
+    </div>
     <div class="timeline">
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div class="tl-role">Consultant Senior RPA & Business Analyst</div>
-            <span class="tl-period">04/2025 — 07/2025</span>
-          </div>
-          <div class="tl-company">Disneyland Paris · Portage salarial · Paris</div>
-          <div class="tl-desc">
-            Identification de 15+ opportunités d'automatisation sur des applications métier critiques (finance, opérations, RH). Cartographie AS-IS / TO-BE, rédaction des spécifications fonctionnelles détaillées, animation des ateliers avec les parties prenantes IT et Métiers.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">UiPath Studio</span>
-            <span class="tl-tag">Orchestrator</span>
-            <span class="tl-tag">Document AI</span>
-            <span class="tl-tag">APIs REST</span>
-            <span class="tl-tag">SQL Server</span>
-          </div>
-          <div class="tl-results">
-            <div class="tl-result"><span class="val">15+</span><span class="lbl">opportunités identifiées</span></div>
-            <div class="tl-result"><span class="val">PDD</span><span class="lbl">livrés à délai</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div class="tl-role">Business Analyst Senior / Consultant RPA</div>
-            <span class="tl-period">05/2024 — 11/2024</span>
-          </div>
-          <div class="tl-company">EDF & BNP Paribas — Squad BAQ · Portage salarial · Paris</div>
-          <div class="tl-desc">
-            Pilotage du RUN opérationnel Blue Prism sur des processus financiers critiques. Gestion des incidents PROD, plan d'optimisation continue, implémentation d'évolutions fonctionnelles sur la banque au quotidien.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">Blue Prism</span>
-            <span class="tl-tag">Control Room</span>
-            <span class="tl-tag">Elasticsearch</span>
-            <span class="tl-tag">Kibana</span>
-            <span class="tl-tag">SQL</span>
-          </div>
-          <div class="tl-results">
-            <div class="tl-result"><span class="val">+30%</span><span class="lbl">disponibilité robots</span></div>
-            <div class="tl-result"><span class="val">-50%</span><span class="lbl">temps résolution incidents</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card" style="border-color:rgba(0,210,255,0.25)">
-          <div style="position:absolute;top:-1px;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);border-radius:inherit"></div>
-          <div class="tl-header">
-            <div class="tl-role">Tech Lead RPA / Business Analyst — <span style="color:var(--gold)">Mission phare</span></div>
-            <span class="tl-period">05/2023 — 11/2023</span>
-          </div>
-          <div class="tl-company">Inetum — Mission Caisse d'Épargne Île-de-France · Paris</div>
-          <div class="tl-desc">
-            Conception et déploiement d'une solution hybride IPA combinant UiPath Document Understanding et LLM pour l'automatisation du processus de déblocage de fonds notaire (EDEBLO). Industrialisation complète, MCO sans interruption de service sur 1500+ dossiers critiques.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">UiPath</span>
-            <span class="tl-tag">Document Understanding</span>
-            <span class="tl-tag">LLM</span>
-            <span class="tl-tag">IPA Cognitive</span>
-            <span class="tl-tag">Elasticsearch</span>
-          </div>
-          <div class="tl-results">
-            <div class="tl-result"><span class="val">2M€</span><span class="lbl">ROI annuel</span></div>
-            <div class="tl-result"><span class="val">97,1%</span><span class="lbl">taux de succès robot</span></div>
-            <div class="tl-result"><span class="val">1500+</span><span class="lbl">dossiers traités</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div class="tl-role">Tech Lead RPA / Business Analyst</div>
-            <span class="tl-period">05/2022 — 11/2022</span>
-          </div>
-          <div class="tl-company">Capgemini — Académie de Versailles (Plateforme Colibris+)</div>
-          <div class="tl-desc">
-            Direction d'une équipe de développeurs pour concevoir la plateforme Colibris+ via UiPath et APIs. Rédaction PDD/SDD, coordination IT/Métiers, animation des rituels Agile et pilotage COPIL/COPROJ.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">UiPath</span>
-            <span class="tl-tag">APIs REST</span>
-            <span class="tl-tag">Scrum</span>
-            <span class="tl-tag">PDD/SDD</span>
-            <span class="tl-tag">Confluence</span>
-          </div>
-          <div class="tl-results">
-            <div class="tl-result"><span class="val">3</span><span class="lbl">devs managés</span></div>
-            <div class="tl-result"><span class="val">✓</span><span class="lbl">Livraison dans les délais</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div class="tl-role">Consultant Senior RPA / Business Analyst</div>
-            <span class="tl-period">03/2021 — 03/2022</span>
-          </div>
-          <div class="tl-company">Cat-Amania — Mission GRDF · Paris</div>
-          <div class="tl-desc">
-            Audit et cartographie des processus comptables et RH. Identification de 6 processus automatisables pour l'Unité Comptable Nationale. Développement et déploiement de 3 processus UiPath, supervision RUN et revue de code.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">UiPath</span>
-            <span class="tl-tag">SAP</span>
-            <span class="tl-tag">APIs REST</span>
-            <span class="tl-tag">Excel</span>
-            <span class="tl-tag">Orchestrator</span>
-          </div>
-          <div class="tl-results">
-            <div class="tl-result"><span class="val">3</span><span class="lbl">robots déployés</span></div>
-            <div class="tl-result"><span class="val">6</span><span class="lbl">processus qualifiés</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-card">
-          <div class="tl-header">
-            <div class="tl-role">Chef de Mission RPA</div>
-            <span class="tl-period">05/2018 — 08/2019</span>
-          </div>
-          <div class="tl-company">Ernst & Young (EY) · Tunis — Clients France & International</div>
-          <div class="tl-desc">
-            Identification et déploiement d'automatisations pour Carrefour France/Belgique (15 processus), BNP Paribas CIB, MGEFI/DGFiP, Eurotunnel (SAP). Encadrement d'une équipe de 4 consultants RPA.
-          </div>
-          <div class="tl-tags">
-            <span class="tl-tag">UiPath</span>
-            <span class="tl-tag">Blue Prism</span>
-            <span class="tl-tag">SAP</span>
-            <span class="tl-tag">OCR</span>
-            <span class="tl-tag">Agile Kanban</span>
-          </div>
-          <div class="tl-results">
-            <div class="tl-result"><span class="val">15</span><span class="lbl">processus Carrefour</span></div>
-            <div class="tl-result"><span class="val">4</span><span class="lbl">consultants managés</span></div>
-            <div class="tl-result"><span class="val">4</span><span class="lbl">grands comptes</span></div>
-          </div>
-        </div>
-      </div>
-
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+        <div class="tl-header"><div class="tl-role">Tech Lead RPA / Business Analyst</div><span class="tl-period">05/2023 — 11/2023</span></div>
+        <div class="tl-company">Inetum — Mission Caisse d'Épargne Île-de-France · Paris</div>
+        <div class="tl-desc">Déploiement EDEBLO (déblocage de fonds notaires) : solution IPA combinant UiPath Document Understanding et LLM pour 1 500+ dossiers critiques/an. Rédaction PDD/SDD, recette métier, industrialisation et MCO sans interruption de service.</div>
+        <div class="tl-tags"><span class="tl-tag">UiPath Studio</span><span class="tl-tag">Document Understanding</span><span class="tl-tag">LLM</span><span class="tl-tag">Orchestrator</span><span class="tl-tag">Elasticsearch</span></div>
+        <div class="tl-results"><div class="tl-result"><span class="val">2 M€</span><span class="lbl">ROI annuel</span></div><div class="tl-result"><span class="val">97,1%</span><span class="lbl">taux succès robot</span></div><div class="tl-result"><span class="val">1 500+</span><span class="lbl">dossiers/an</span></div></div>
+      </div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+        <div class="tl-header"><div class="tl-role">Tech Lead RPA / Business Analyst</div><span class="tl-period">05/2022 — 11/2022</span></div>
+        <div class="tl-company">Capgemini — Plateforme Colibris+ · Académie de Versailles</div>
+        <div class="tl-desc">Direction d'une équipe de 3 développeurs pour concevoir et déployer la plateforme Colibris+ (Académie de Versailles). Rédaction PDD/SDD, animation ateliers métier, coordination IT/Métiers, pilotage COPIL/COPROJ Agile.</div>
+        <div class="tl-tags"><span class="tl-tag">UiPath</span><span class="tl-tag">APIs REST</span><span class="tl-tag">Scrum</span><span class="tl-tag">Confluence</span><span class="tl-tag">Jira</span></div>
+        <div class="tl-results"><div class="tl-result"><span class="val">3</span><span class="lbl">développeurs managés</span></div><div class="tl-result"><span class="val">✓</span><span class="lbl">Livraison dans les délais</span></div></div>
+      </div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+        <div class="tl-header"><div class="tl-role">Consultant Senior RPA / Business Analyst</div><span class="tl-period">03/2021 — 03/2022</span></div>
+        <div class="tl-company">Cat-Amania — Mission GRDF · Paris</div>
+        <div class="tl-desc">Audit et cartographie des processus comptables et RH. Identification de 6 processus automatisables pour l'Unité Comptable Nationale. Développement et déploiement de 3 processus UiPath, supervision RUN.</div>
+        <div class="tl-tags"><span class="tl-tag">UiPath</span><span class="tl-tag">SAP</span><span class="tl-tag">Excel</span><span class="tl-tag">Orchestrator</span><span class="tl-tag">APIs REST</span></div>
+        <div class="tl-results"><div class="tl-result"><span class="val">3</span><span class="lbl">robots déployés</span></div><div class="tl-result"><span class="val">6</span><span class="lbl">processus qualifiés</span></div></div>
+      </div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+        <div class="tl-header"><div class="tl-role">Chef de Mission RPA</div><span class="tl-period">05/2018 — 08/2019</span></div>
+        <div class="tl-company">Ernst &amp; Young (EY) · Tunis — Clients France &amp; International</div>
+        <div class="tl-desc">Déploiement multi-clients : Carrefour France &amp; Belgique (15 processus), BNP Paribas CIB, MGEFI/DGFiP, Eurotunnel SAP. Encadrement de 4 consultants RPA, animation Agile/Scrum, recette fonctionnelle (UAT).</div>
+        <div class="tl-tags"><span class="tl-tag">UiPath</span><span class="tl-tag">Blue Prism</span><span class="tl-tag">SAP</span><span class="tl-tag">OCR</span><span class="tl-tag">Agile Kanban</span></div>
+        <div class="tl-results"><div class="tl-result"><span class="val">15</span><span class="lbl">processus Carrefour</span></div><div class="tl-result"><span class="val">4</span><span class="lbl">clients grands comptes</span></div><div class="tl-result"><span class="val">4</span><span class="lbl">consultants managés</span></div></div>
+      </div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+        <div class="tl-header"><div class="tl-role">Consultant Senior RPA &amp; Business Analyst</div><span class="tl-period">04/2025 — 07/2025</span></div>
+        <div class="tl-company">Disneyland Paris · Portage salarial · Paris</div>
+        <div class="tl-desc">Identification de 15+ opportunités d'automatisation sur applications métier Finance, RH et Opérations. Cartographie AS-IS / TO-BE, rédaction spécifications fonctionnelles, animation ateliers IT et Métiers.</div>
+        <div class="tl-tags"><span class="tl-tag">UiPath Studio</span><span class="tl-tag">Orchestrator</span><span class="tl-tag">Document AI</span><span class="tl-tag">APIs REST</span><span class="tl-tag">SQL Server</span></div>
+        <div class="tl-results"><div class="tl-result"><span class="val">15+</span><span class="lbl">opportunités identifiées</span></div><div class="tl-result"><span class="val">Finance / RH / Ops</span><span class="lbl">périmètre</span></div></div>
+      </div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div class="tl-card">
+        <div class="tl-header"><div class="tl-role">Business Analyst Senior / Consultant RPA</div><span class="tl-period">05/2024 — 11/2024</span></div>
+        <div class="tl-company">EDF &amp; BNP Paribas — Squad BAQ · Portage salarial · Paris</div>
+        <div class="tl-desc">Pilotage RUN opérationnel Blue Prism sur processus financiers critiques. Gestion incidents PROD, plan d'optimisation continue, implémentation d'évolutions fonctionnelles.</div>
+        <div class="tl-tags"><span class="tl-tag">Blue Prism</span><span class="tl-tag">Control Room</span><span class="tl-tag">Elasticsearch</span><span class="tl-tag">Kibana</span><span class="tl-tag">SQL</span></div>
+        <div class="tl-results"><div class="tl-result"><span class="val">+30%</span><span class="lbl">disponibilité robots</span></div><div class="tl-result"><span class="val">-50%</span><span class="lbl">temps résolution incidents</span></div></div>
+      </div></div>
+    </div>
+    <div class="tl-footer fade-in">
+      <span>Disponible : <strong>CDI Île-de-France</strong></span>
+      <span>Secteurs : <strong>Banque · Assurance · Secteur public</strong></span>
+      <span>Préavis : <strong>Immédiat</strong></span>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="container">
     <p class="section-tag fade-in">Expertise</p>
     <h2 class="section-title fade-in">Compétences <em>techniques</em></h2>
-    <p class="section-desc fade-in">Du recueil des besoins à l'industrialisation en production.</p>
-
+    <p class="section-desc fade-in">Du recueil des besoins métier à l'industrialisation en production.</p>
     <div class="skills-grid">
-
       <div class="skill-card">
-        <div class="skill-card-icon">🤖</div>
-        <div class="skill-card-title">Plateformes RPA</div>
-        <div class="skill-card-desc">Développement expert sur les deux leaders du marché</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">UiPath Studio / Orchestrator</span><span class="skill-bar-pct">Expert</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Blue Prism AD01</span><span class="skill-bar-pct">Avancé</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Power Automate</span><span class="skill-bar-pct">Intermédiaire</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="45"></div></div>
-        </div>
+        <div class="skill-card-header"><span class="skill-card-icon">🤖</span><span class="skill-card-title">Plateformes RPA</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">UiPath Studio / Orchestrator</span><span class="skill-bar-pct">Expert certifié</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Blue Prism AD01</span><span class="skill-bar-pct">Avancé</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Power Automate</span><span class="skill-bar-pct">Intermédiaire</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="45"></div></div></div>
       </div>
-
       <div class="skill-card">
-        <div class="skill-card-icon">🧠</div>
-        <div class="skill-card-title">IA & Agentic AI</div>
-        <div class="skill-card-desc">LLMs, agents autonomes et hyperautomation</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Document Understanding / IDP</span><span class="skill-bar-pct">Avancé</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">LLM / LangChain / RAG</span><span class="skill-bar-pct">Intermédiaire</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Agentic AI (AutoGen, CrewAI)</span><span class="skill-bar-pct">En développement</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="50"></div></div>
-        </div>
+        <div class="skill-card-header"><span class="skill-card-icon">📋</span><span class="skill-card-title">Business Analysis</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Cartographie AS-IS / TO-BE</span><span class="skill-bar-pct">Expert</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Rédaction PDD / SDD</span><span class="skill-bar-pct">Expert</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Pilotage recette UAT</span><span class="skill-bar-pct">Expert</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div></div>
       </div>
-
       <div class="skill-card">
-        <div class="skill-card-icon">📋</div>
-        <div class="skill-card-title">Business Analysis</div>
-        <div class="skill-card-desc">De la qualification ROI au pilotage de la recette</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Cartographie AS-IS / TO-BE</span><span class="skill-bar-pct">Expert</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Rédaction PDD / SDD</span><span class="skill-bar-pct">Expert</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Pilotage recette (UAT)</span><span class="skill-bar-pct">Expert</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
-        </div>
+        <div class="skill-card-header"><span class="skill-card-icon">🧠</span><span class="skill-card-title">IA &amp; Agentic AI</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Document Understanding / IDP</span><span class="skill-bar-pct">Avancé</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">LLM / LangChain / RAG</span><span class="skill-bar-pct">Intermédiaire</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="62"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Agentic AI (AutoGen)</span><span class="skill-bar-pct">En développement</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="45"></div></div></div>
       </div>
-
       <div class="skill-card">
-        <div class="skill-card-icon">⚙️</div>
-        <div class="skill-card-title">Cloud & DevOps</div>
-        <div class="skill-card-desc">Déploiement et infrastructure moderne</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Python / SQL</span><span class="skill-bar-pct">Avancé</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Azure / AWS</span><span class="skill-bar-pct">Intermédiaire</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="60"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Docker / APIs REST</span><span class="skill-bar-pct">Intermédiaire</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="65"></div></div>
-        </div>
+        <div class="skill-card-header"><span class="skill-card-icon">⚙️</span><span class="skill-card-title">Cloud &amp; Dev</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Python / SQL</span><span class="skill-bar-pct">Avancé</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Azure / AWS</span><span class="skill-bar-pct">Intermédiaire</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="58"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Docker / APIs REST</span><span class="skill-bar-pct">Intermédiaire</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="62"></div></div></div>
       </div>
-
       <div class="skill-card">
-        <div class="skill-card-icon">🗂️</div>
-        <div class="skill-card-title">Outils Projet</div>
-        <div class="skill-card-desc">Pilotage Agile et documentation</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Jira / Confluence</span><span class="skill-bar-pct">Expert</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">SharePoint / Azure DevOps</span><span class="skill-bar-pct">Avancé</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Scrum (PSM I / PSPO I)</span><span class="skill-bar-pct">Certifié</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div>
-        </div>
+        <div class="skill-card-header"><span class="skill-card-icon">🗂️</span><span class="skill-card-title">Outils Projet</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Jira / Confluence</span><span class="skill-bar-pct">Avancé</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">SharePoint</span><span class="skill-bar-pct">Avancé</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Azure DevOps</span><span class="skill-bar-pct">En développement</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="35"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Scrum / PSM I / PSPO I</span><span class="skill-bar-pct">Certifié</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div></div>
       </div>
-
       <div class="skill-card">
-        <div class="skill-card-icon">🌐</div>
-        <div class="skill-card-title">Langues & Formation</div>
-        <div class="skill-card-desc">Communication et fond académique solide</div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Français</span><span class="skill-bar-pct">Courant</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="100"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Anglais</span><span class="skill-bar-pct">B2/C1</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div>
-        </div>
-        <div class="skill-bar-wrap">
-          <div class="skill-bar-header"><span class="skill-bar-name">Arabe</span><span class="skill-bar-pct">Langue maternelle</span></div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-width="100"></div></div>
-        </div>
+        <div class="skill-card-header"><span class="skill-card-icon">🌐</span><span class="skill-card-title">Langues</span></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Français</span><span class="skill-bar-pct">Courant</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="100"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Anglais</span><span class="skill-bar-pct">B2/C1</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div></div>
+        <div class="skill-bar-wrap"><div class="skill-bar-header"><span class="skill-bar-name">Arabe</span><span class="skill-bar-pct">Langue maternelle</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="100"></div></div></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- CLIENTS -->
 <section id="clients">
   <div class="container">
     <p class="section-tag fade-in">Références</p>
-    <h2 class="section-title fade-in">Clients & <em>secteurs</em></h2>
-    <p class="section-desc fade-in clients-intro">Grands comptes en banque, énergie, audit, retail et secteur public.</p>
-
+    <h2 class="section-title fade-in">Clients &amp; <em>secteurs</em></h2>
+    <p class="section-desc fade-in">Grands comptes banque, énergie, audit, retail et secteur public.</p>
     <div class="clients-grid">
       <div class="client-card"><div class="client-sector">Banque</div><div class="client-name">BNP Paribas</div></div>
       <div class="client-card"><div class="client-sector">Banque</div><div class="client-name">Caisse d'Épargne IDF</div></div>
       <div class="client-card"><div class="client-sector">Énergie</div><div class="client-name">EDF</div></div>
       <div class="client-card"><div class="client-sector">Énergie</div><div class="client-name">GRDF</div></div>
-      <div class="client-card"><div class="client-sector">Audit</div><div class="client-name">Ernst & Young</div></div>
+      <div class="client-card"><div class="client-sector">Audit</div><div class="client-name">Ernst &amp; Young</div></div>
       <div class="client-card"><div class="client-sector">Audit</div><div class="client-name">KPMG</div></div>
       <div class="client-card"><div class="client-sector">Loisirs</div><div class="client-name">Disneyland Paris</div></div>
       <div class="client-card"><div class="client-sector">Retail</div><div class="client-name">Carrefour</div></div>
@@ -838,26 +345,25 @@ footer {
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="container">
     <div class="contact-inner">
       <p class="section-tag fade-in" style="justify-content:center">Contact</p>
-      <h2 class="section-title fade-in" style="text-align:center">Parlons de votre<br><em>prochain projet</em></h2>
-      <p class="section-desc fade-in" style="text-align:center;margin:0 auto 0.5rem">
-        Je recherche un poste CDI en Île-de-France (client final ou secteur public).<br>
-        Ouvert également aux missions en portage salarial.
-      </p>
+      <h2 class="section-title fade-in" style="text-align:center">Disponible pour un <em>CDI</em></h2>
+      <p class="section-desc fade-in" style="text-align:center;margin:0 auto">Île-de-France · Client final ou secteur public · Disponible immédiatement</p>
       <div style="display:flex;justify-content:center" class="fade-in">
-        <a href="mailto:abdelhaksaket@gmail.com" class="contact-cta">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        <div class="availability">CDI Île-de-France · <span>Disponible immédiatement</span> · Portage salarial OK</div>
+      </div>
+      <div style="display:flex;justify-content:center" class="fade-in">
+        <a href="mailto:abdelhaksaket@gmail.com" class="contact-email">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
           abdelhaksaket@gmail.com
         </a>
       </div>
       <div class="contact-links fade-in">
         <a href="https://linkedin.com/in/abdelhaksaket" target="_blank" class="contact-link">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          linkedin.com/in/abdelhaksaket
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
         </a>
         <a href="tel:0662242313" class="contact-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l1.99-1.99a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -865,7 +371,7 @@ footer {
         </a>
         <span class="contact-link">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Maisons-Alfort, Île-de-France
+          Maisons-Alfort (94)
         </span>
       </div>
     </div>
@@ -873,94 +379,34 @@ footer {
 </section>
 
 <footer>
-  <div>© 2025 Abdelhak Saket — Senior RPA & Intelligent Automation Architect</div>
-  <div style="margin-top:6px;color:#3a4a6a">Ingénieur d'État · ENIT 2006 · Maisons-Alfort (94)</div>
+  <div>Abdelhak Saket — Consultant Senior RPA &amp; Intelligent Automation · Maisons-Alfort (94)</div>
+  <div style="margin-top:4px">Ingénieur d'État · ENIT 2006 · abdelhaksaket@gmail.com</div>
 </footer>
 
 <script>
-// ── CURSOR GLOW ─────────────────────────────────────────────────────────
-const glow = document.getElementById('glow');
-window.addEventListener('mousemove', e => {
-  glow.style.left = e.clientX + 'px';
-  glow.style.top = e.clientY + 'px';
-});
-
-// ── INTERSECTION OBSERVER ────────────────────────────────────────────────
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      // Trigger skill bars
-      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        setTimeout(() => { bar.style.width = bar.dataset.width + '%'; }, 200);
+      entry.target.querySelectorAll('.skill-bar-fill').forEach(function(bar) {
+        setTimeout(function() { bar.style.width = bar.dataset.width + '%'; }, 150);
       });
     }
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in, .tl-item, .skill-card, .client-card').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in, .tl-item, .skill-card, .client-card').forEach(function(el) { observer.observe(el); });
+document.querySelectorAll('.client-card').forEach(function(c, i) { c.style.transitionDelay = (i * 0.04) + 's'; });
+document.querySelectorAll('.tl-item').forEach(function(c, i) { c.style.transitionDelay = (i * 0.08) + 's'; });
+document.querySelectorAll('.skill-card').forEach(function(c, i) { c.style.transitionDelay = (i * 0.07) + 's'; });
 
-// Stagger client cards
-document.querySelectorAll('.client-card').forEach((card, i) => {
-  card.style.transitionDelay = (i * 0.05) + 's';
-});
-
-// Stagger timeline items
-document.querySelectorAll('.tl-item').forEach((item, i) => {
-  item.style.transitionDelay = (i * 0.1) + 's';
-});
-
-// ── COUNTER ANIMATION ────────────────────────────────────────────────────
-function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  const prefix = el.dataset.prefix || '';
-  const suffix = el.dataset.suffix || '';
-  const duration = 1800;
-  const start = performance.now();
-  function update(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 3);
-    const val = Math.round(ease * target);
-    el.textContent = prefix + val + suffix;
-    if (progress < 1) requestAnimationFrame(update);
-  }
-  requestAnimationFrame(update);
-}
-
-const counterObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('[data-target]').forEach(animateCounter);
-      counterObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-const metricsEl = document.querySelector('.hero-metrics');
-if (metricsEl) counterObserver.observe(metricsEl);
-
-// ── SMOOTH NAV ────────────────────────────────────────────────────────────
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
     e.preventDefault();
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var t = document.querySelector(a.getAttribute('href'));
+    if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-
-// ── NAV ACTIVE ────────────────────────────────────────────────────────────
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
-  });
-  navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--cyan)' : '';
-  });
-}, { passive: true });
 </script>
 </body>
 </html>
