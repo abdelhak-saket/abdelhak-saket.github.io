@@ -403,72 +403,123 @@ footer{border-top:1px solid var(--border);padding:1.8rem;text-align:center;font-
 </section>
 
 <!-- FORMATIONS -->
-<section id="formations">
-  <div class="container">
-    <p class="section-tag fade-in">Formations</p>
-    <h2 class="section-title fade-in">Demande de <em>formation</em></h2>
-    <p class="section-desc fade-in">Formations pratiques en petits groupes (max 8 personnes), dispensées en présentiel à Paris.</p>
-    <div class="form-grid fade-in">
-      <div class="formation-card">
-        <div class="formation-header">
-          <div class="formation-badge badge-adv">Avancé</div>
-          <div class="formation-price">2 490 &euro; <span>HT / personne</span></div>
+    <section id="formations">
+      <div class="container">
+        <p class="section-tag fade-in">Formations</p>
+        <h2 class="section-title fade-in">Plan de <em>montée en valeur</em></h2>
+        <p class="section-desc fade-in">Formations choisies pour renforcer le positionnement Senior RPA, l’axe IA et la crédibilité commerciale auprès des clients finaux.</p>
+
+        <div class="form-grid fade-in">
+          <div class="formation-card">
+            <div class="formation-header">
+              <div class="formation-badge badge-adv">Priorité haute</div>
+              <div class="formation-price">1 500–2 100 € <span>HT / personne</span></div>
+            </div>
+            <h3 class="formation-title">UiPath Advanced Developer</h3>
+            <p class="formation-desc">REFramework, intégrations API REST/SOAP, Document Understanding, gestion avancée des exceptions, préparation certification UiPath Advanced.</p>
+            <div class="formation-meta"><span>5 jours</span><span>Intermédiaire+</span><span>Max 8</span></div>
+            <div class="formation-programme">
+              <div class="prog-item"><span class="prog-num">01</span>REFramework en profondeur</div>
+              <div class="prog-item"><span class="prog-num">02</span>Intégrations APIs REST et SOAP</div>
+              <div class="prog-item"><span class="prog-num">03</span>Document Understanding &amp; IDP</div>
+              <div class="prog-item"><span class="prog-num">04</span>Gestion avancée des exceptions</div>
+              <div class="prog-item"><span class="prog-num">05</span>Préparation certification UiPath Advanced</div>
+            </div>
+            <button class="btn-formation" onclick="openForm('UiPath Advanced Developer')">Demander cette formation</button>
+          </div>
+
+          <div class="formation-card">
+            <div class="formation-header">
+              <div class="formation-badge badge-ba">Priorité haute</div>
+              <div class="formation-price">800–1 200 € <span>HT / personne</span></div>
+            </div>
+            <h3 class="formation-title">RPA Business Analyst</h3>
+            <p class="formation-desc">Identifier, qualifier et piloter des projets RPA. Rédaction PDD, animation ateliers, pilotage recette UAT, calcul ROI.</p>
+            <div class="formation-meta"><span>2 jours</span><span>Tous niveaux</span><span>Max 8</span></div>
+            <div class="formation-programme">
+              <div class="prog-item"><span class="prog-num">01</span>Identification et qualification cas d'usage</div>
+              <div class="prog-item"><span class="prog-num">02</span>Estimation ROI et priorisation</div>
+              <div class="prog-item"><span class="prog-num">03</span>Rédaction PDD (Process Design Document)</div>
+              <div class="prog-item"><span class="prog-num">04</span>Animation ateliers métier</div>
+              <div class="prog-item"><span class="prog-num">05</span>Pilotage recette UAT et reporting</div>
+            </div>
+            <button class="btn-formation" onclick="openForm('RPA Business Analyst')">Demander cette formation</button>
+          </div>
+
+          <div class="formation-card">
+            <div class="formation-header">
+              <div class="formation-badge badge-adv">Nouveau</div>
+              <div class="formation-price">Sur demande <span>intra / sur mesure</span></div>
+            </div>
+            <h3 class="formation-title">UiPath Document Understanding &amp; AI</h3>
+            <p class="formation-desc">Concevoir des workflows IDP, structurer des flux documentaires, exploiter OCR, classification, extraction et préparation à des usages IA.</p>
+            <div class="formation-meta"><span>2 à 3 jours</span><span>Intermédiaire</span><span>Max 8</span></div>
+            <div class="formation-programme">
+              <div class="prog-item"><span class="prog-num">01</span>OCR, classification et extraction</div>
+              <div class="prog-item"><span class="prog-num">02</span>Document Understanding end-to-end</div>
+              <div class="prog-item"><span class="prog-num">03</span>Validation humaine et exceptions</div>
+              <div class="prog-item"><span class="prog-num">04</span>Cas d’usage Finance, RH, opérations</div>
+              <div class="prog-item"><span class="prog-num">05</span>Passage vers l’IA générative et les agents</div>
+            </div>
+            <button class="btn-formation" onclick="openForm('UiPath Document Understanding & AI')">Demander cette formation</button>
+          </div>
+
+          <div class="formation-card">
+            <div class="formation-header">
+              <div class="formation-badge badge-ba">Complément</div>
+              <div class="formation-price">Sur demande <span>extension de profil</span></div>
+            </div>
+            <h3 class="formation-title">Power Platform Fundamentals</h3>
+            <p class="formation-desc">Acquérir les bases Power Automate / Power Platform pour élargir le spectre automation low-code et mieux dialoguer avec les directions métiers.</p>
+            <div class="formation-meta"><span>1 à 2 jours</span><span>Débutant+</span><span>Max 8</span></div>
+            <div class="formation-programme">
+              <div class="prog-item"><span class="prog-num">01</span>Vue d’ensemble Power Platform</div>
+              <div class="prog-item"><span class="prog-num">02</span>Power Automate et cas d’usage</div>
+              <div class="prog-item"><span class="prog-num">03</span>Connecteurs et intégrations</div>
+              <div class="prog-item"><span class="prog-num">04</span>Positionnement face à UiPath</div>
+              <div class="prog-item"><span class="prog-num">05</span>Préparation certification PL-900</div>
+            </div>
+            <button class="btn-formation" onclick="openForm('Power Platform Fundamentals')">Demander cette formation</button>
+          </div>
+
+          <div class="formation-card">
+            <div class="formation-header">
+              <div class="formation-badge badge-adv">Spécialisation</div>
+              <div class="formation-price">Sur demande <span>multi-plateforme</span></div>
+            </div>
+            <h3 class="formation-title">Blue Prism Developer Refresh</h3>
+            <p class="formation-desc">Consolider le socle Blue Prism, la logique de RUN, les bonnes pratiques d’industrialisation et le positionnement multi-RPA en grands comptes.</p>
+            <div class="formation-meta"><span>2 jours</span><span>Intermédiaire</span><span>Max 8</span></div>
+            <div class="formation-programme">
+              <div class="prog-item"><span class="prog-num">01</span>Architecture Blue Prism</div>
+              <div class="prog-item"><span class="prog-num">02</span>Control Room et supervision</div>
+              <div class="prog-item"><span class="prog-num">03</span>Exception handling et RUN</div>
+              <div class="prog-item"><span class="prog-num">04</span>Industrialisation et monitoring</div>
+              <div class="prog-item"><span class="prog-num">05</span>Comparatif UiPath / Blue Prism</div>
+            </div>
+            <button class="btn-formation" onclick="openForm('Blue Prism Developer Refresh')">Demander cette formation</button>
+          </div>
+
+          <div class="formation-card">
+            <div class="formation-header">
+              <div class="formation-badge badge-ba">Sur mesure</div>
+              <div class="formation-price">Sur demande <span>atelier conseil</span></div>
+            </div>
+            <h3 class="formation-title">Atelier ROI &amp; Discovery RPA</h3>
+            <p class="formation-desc">Méthode complète pour identifier, scorer et prioriser les cas d’usage, construire un business case, et cadrer la feuille de route automatisation.</p>
+            <div class="formation-meta"><span>1 jour</span><span>Tous niveaux</span><span>Max 10</span></div>
+            <div class="formation-programme">
+              <div class="prog-item"><span class="prog-num">01</span>Cartographie AS-IS / TO-BE</div>
+              <div class="prog-item"><span class="prog-num">02</span>Scoring complexité / valeur</div>
+              <div class="prog-item"><span class="prog-num">03</span>Business case et ROI</div>
+              <div class="prog-item"><span class="prog-num">04</span>Priorisation portefeuille</div>
+              <div class="prog-item"><span class="prog-num">05</span>Roadmap d’industrialisation</div>
+            </div>
+            <button class="btn-formation" onclick="openForm('Atelier ROI & Discovery RPA')">Demander cette formation</button>
+          </div>
         </div>
-        <h3 class="formation-title">UiPath Advanced Developer</h3>
-        <p class="formation-desc">REFramework, intégrations API REST/SOAP, Document Understanding, gestion avancée des exceptions. Préparation certification UiPath Advanced.</p>
-        <div class="formation-meta"><span>🕐 5 jours</span><span>📊 Intermédiaire</span><span>👥 Max 8</span></div>
-        <div class="formation-programme">
-          <div class="prog-item"><span class="prog-num">01</span>REFramework en profondeur</div>
-          <div class="prog-item"><span class="prog-num">02</span>Intégrations APIs REST et SOAP</div>
-          <div class="prog-item"><span class="prog-num">03</span>Document Understanding &amp; IDP</div>
-          <div class="prog-item"><span class="prog-num">04</span>Gestion avancée des exceptions</div>
-          <div class="prog-item"><span class="prog-num">05</span>Préparation certification UiPath Advanced</div>
-        </div>
-        <button class="btn-formation" onclick="openForm('UiPath Advanced Developer')">Demander cette formation →</button>
       </div>
-      <div class="formation-card">
-        <div class="formation-header">
-          <div class="formation-badge badge-ba">Fondamentaux</div>
-          <div class="formation-price">890 &euro; <span>HT / personne</span></div>
-        </div>
-        <h3 class="formation-title">RPA Business Analyst</h3>
-        <p class="formation-desc">Identifier, qualifier et piloter des projets RPA. Rédaction PDD, animation ateliers, pilotage recette UAT, calcul ROI.</p>
-        <div class="formation-meta"><span>🕐 2 jours</span><span>📊 Tous niveaux</span><span>👥 Max 8</span></div>
-        <div class="formation-programme">
-          <div class="prog-item"><span class="prog-num">01</span>Identification et qualification cas d'usage</div>
-          <div class="prog-item"><span class="prog-num">02</span>Estimation ROI et priorisation</div>
-          <div class="prog-item"><span class="prog-num">03</span>Rédaction PDD (Process Design Document)</div>
-          <div class="prog-item"><span class="prog-num">04</span>Animation ateliers métier</div>
-          <div class="prog-item"><span class="prog-num">05</span>Pilotage recette UAT et reporting</div>
-        </div>
-        <button class="btn-formation" onclick="openForm('RPA Business Analyst')">Demander cette formation →</button>
-      </div>
-    </div>
-    <!-- MODAL -->
-    <div id="form-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:500;align-items:center;justify-content:center;backdrop-filter:blur(6px)">
-      <div class="modal-box">
-        <button onclick="closeForm()" class="modal-close">✕</button>
-        <p class="section-tag" style="margin-bottom:0.4rem">Inscription</p>
-        <h3 style="font-family:var(--font-display);font-size:1.3rem;font-weight:600;margin-bottom:0.3rem">Demande de formation</h3>
-        <p id="modal-fname" style="font-family:var(--font-mono);font-size:0.78rem;color:var(--cyan);margin-bottom:1.4rem"></p>
-        <div class="mform-grid">
-          <div class="mform-group"><label>Prénom *</label><input type="text" id="f-firstname" placeholder="Jean"></div>
-          <div class="mform-group"><label>Nom *</label><input type="text" id="f-lastname" placeholder="Dupont"></div>
-          <div class="mform-group mform-full"><label>Email professionnel *</label><input type="email" id="f-email" placeholder="jean.dupont@entreprise.com"></div>
-          <div class="mform-group"><label>Téléphone</label><input type="tel" id="f-phone" placeholder="06 12 34 56 78"></div>
-          <div class="mform-group"><label>Entreprise</label><input type="text" id="f-company" placeholder="Ma Société"></div>
-          <div class="mform-group mform-full"><label>Disponibilités / message</label><textarea id="f-message" rows="3" placeholder="Vos disponibilités, questions..."></textarea></div>
-        </div>
-        <div id="form-success" style="display:none;padding:1rem;background:rgba(0,168,204,0.08);border:1px solid var(--border2);border-radius:8px;text-align:center;font-family:var(--font-mono);font-size:0.82rem;color:var(--cyan)">✓ Demande envoyée ! Abdelhak vous contactera sous 48h.</div>
-        <div id="form-error" style="display:none;padding:0.7rem;background:rgba(200,50,50,0.08);border:1px solid rgba(200,50,50,0.2);border-radius:8px;font-size:0.78rem;color:#fc8080;margin-bottom:1rem"></div>
-        <div id="form-actions" style="display:flex;gap:0.8rem;margin-top:1.2rem">
-          <button class="btn btn-ghost" onclick="closeForm()">Annuler</button>
-          <button class="btn btn-primary" onclick="submitForm()">Envoyer la demande</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 <!-- REALISATIONS -->
 <section id="realisations" style="background:var(--bg2)">
