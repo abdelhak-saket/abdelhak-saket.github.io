@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ASrobotics — Cabinet de conseil en automatisation intelligente. Cloud, RPA et IA pour la transformation des grands comptes BFSI et industrie.">
-<title>ASrobotics — Cloud · RPA · IA</title>
+<meta name="description" content="Abdelhak Saket — Chef de Projet Transformation & Digital. 15 ans d'expérience, pilotage de projets complexes RPA & IA en environnement bancaire régulé.">
+<title>Abdelhak Saket — Chef de Projet Transformation & Digital</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,400&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* Light corporate palette */
   --bg: #ffffff;
   --bg-soft: #fafbfc;
   --bg-alt: #f4f6f9;
@@ -18,21 +17,18 @@
   --surface-warm: #fdfcfa;
   --border: #e6eaf0;
   --border-strong: #d4dae3;
-  --ink: #0a1226;        /* primary text — near-black with hint of navy */
+  --ink: #0a1226;
   --ink-soft: #2c3850;
   --muted: #6c7a92;
   --muted-soft: #9ba5b8;
-  --accent: #0084a3;      /* deeper cyan for white-bg contrast */
+  --accent: #0084a3;
   --accent-soft: #00a8cc;
   --accent-fade: #e0f4f9;
-  --gold: #b88425;        /* editorial warm tone */
+  --gold: #b88425;
   --gold-fade: #fbf3e3;
   --emerald: #1f8f6c;
   --emerald-fade: #e3f4ed;
-  --rose: #b54b6e;
-  --rose-fade: #fbe7ee;
 
-  /* Typography */
   --f-display: 'Fraunces', Georgia, serif;
   --f-body: 'Geist', system-ui, sans-serif;
   --f-mono: 'DM Mono', ui-monospace, monospace;
@@ -52,1205 +48,454 @@ body {
   color: var(--ink);
   line-height: 1.6;
   font-size: 15px;
-  font-weight: 400;
 }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; font-family: inherit; }
 ul { list-style: none; }
 img, svg { max-width: 100%; }
 
-/* Subtle background pattern for editorial feel */
 body::before {
   content: '';
   position: fixed; inset: 0;
   z-index: -1;
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(10, 18, 38, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(10, 18, 38, 0.04) 1px, transparent 0);
   background-size: 36px 36px;
   pointer-events: none;
   opacity: 0.7;
 }
 
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 32px;
-  position: relative;
-}
+.container { max-width: 1180px; margin: 0 auto; padding: 0 32px; position: relative; }
 
-/* ───────────────────────── NAVIGATION ───────────────────────── */
+/* ───── NAV ───── */
 nav.topbar {
-  position: fixed; top: 0; left: 0; right: 0;
-  z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 16px 32px;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-bottom: 1px solid transparent;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: border-color .3s ease;
 }
-.brand {
-  font-family: var(--f-display);
-  font-weight: 800;
-  font-size: 22px;
-  letter-spacing: -0.025em;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--ink);
-}
-.brand-mark {
-  width: 28px; height: 28px;
-  border-radius: 7px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
-  display: flex; align-items: center; justify-content: center;
-  color: white;
+nav.topbar.scrolled { border-bottom-color: var(--border); }
+.brand { font-family: var(--f-display); font-weight: 800; font-size: 21px; letter-spacing: -0.025em; display: flex; align-items: center; gap: 11px; }
+.brand .monogram {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: var(--ink); color: #fff;
+  display: grid; place-items: center;
+  font-size: 14px; font-weight: 700; letter-spacing: 0;
   font-family: var(--f-mono);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: -0.5px;
 }
-.brand-name em { font-style: italic; font-weight: 300; color: var(--accent); }
-.nav-links { display: flex; gap: 32px; align-items: center; }
-.nav-links a {
-  font-family: var(--f-mono);
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-  transition: color 0.18s;
-}
-.nav-links a:hover { color: var(--ink); }
+.brand .monogram span { color: var(--accent-soft); }
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--ink-soft); transition: color .2s; }
+.nav-links a:hover { color: var(--accent); }
 .nav-cta {
-  padding: 8px 18px;
-  border-radius: 6px;
-  background: var(--ink);
-  color: white;
-  font-family: var(--f-mono);
-  font-size: 12px;
-  letter-spacing: 0.03em;
-  transition: background 0.18s, transform 0.12s;
-  border: none;
+  padding: 9px 18px; border-radius: var(--radius);
+  background: var(--ink); color: #fff !important; font-size: 13px; font-weight: 600;
+  transition: transform .2s, box-shadow .2s;
 }
-.nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: var(--shadow); }
+@media (max-width: 820px) { .nav-links a:not(.nav-cta) { display: none; } }
 
-/* ───────────────────────── HERO ───────────────────────── */
-section { padding: 96px 0; }
-section.hero { padding-top: 168px; padding-bottom: 80px; }
-
+/* ───── HERO ───── */
+.hero { padding: 168px 0 90px; position: relative; }
 .hero-eyebrow {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  margin-bottom: 28px;
+  font-family: var(--f-mono); font-size: 12.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 26px;
   display: flex; align-items: center; gap: 12px;
 }
-.hero-eyebrow::before {
-  content: ''; width: 36px; height: 1px;
-  background: var(--accent);
-}
-
+.hero-eyebrow::before { content: ''; width: 38px; height: 1px; background: var(--accent); display: inline-block; }
 .hero-headline {
-  font-family: var(--f-display);
-  font-size: clamp(48px, 7vw, 92px);
-  font-weight: 600;
-  line-height: 0.98;
-  letter-spacing: -0.035em;
-  margin-bottom: 28px;
-  max-width: 14ch;
+  font-family: var(--f-display); font-weight: 300;
+  font-size: clamp(40px, 6.5vw, 78px); line-height: 1.02;
+  letter-spacing: -0.03em; color: var(--ink); margin-bottom: 28px;
 }
-.hero-headline em {
-  font-style: italic;
-  font-weight: 300;
-  color: var(--accent);
-}
-
+.hero-headline strong { font-weight: 600; font-style: italic; }
+.hero-headline .accent { color: var(--accent); }
 .hero-sub {
-  font-size: 19px;
-  color: var(--ink-soft);
-  font-weight: 300;
-  line-height: 1.55;
-  max-width: 580px;
-  margin-bottom: 40px;
+  font-size: 18px; line-height: 1.65; color: var(--ink-soft);
+  max-width: 660px; margin-bottom: 38px; font-weight: 400;
 }
-.hero-sub strong { color: var(--ink); font-weight: 500; }
-
-.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-sub b { color: var(--ink); font-weight: 600; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
 .btn {
-  padding: 13px 24px;
-  border-radius: 8px;
-  font-family: var(--f-body);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.005em;
-  border: none;
-  transition: all 0.18s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 13px 24px; border-radius: var(--radius); font-size: 14.5px; font-weight: 600;
+  transition: transform .2s, box-shadow .2s, background .2s;
 }
-.btn-primary {
-  background: var(--ink);
-  color: white;
-}
-.btn-primary:hover { background: var(--accent); }
-.btn-ghost {
-  background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--border-strong);
-}
-.btn-ghost:hover { border-color: var(--ink); background: var(--bg-soft); }
-.btn-arrow { transition: transform 0.2s; }
-.btn:hover .btn-arrow { transform: translateX(3px); }
+.btn-primary { background: var(--ink); color: #fff; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--border-strong); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.btn svg { width: 17px; height: 17px; }
 
-.hero-pillars {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin-top: 88px;
-  padding-top: 48px;
-  border-top: 1px solid var(--border);
-}
-.pillar { padding: 0 28px; border-left: 1px solid var(--border); }
-.pillar:first-child { border-left: none; padding-left: 0; }
-.pillar-num {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 14px;
-  letter-spacing: 0.1em;
-}
-.pillar-title {
-  font-family: var(--f-display);
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: -0.02em;
-}
-.pillar-title em { font-style: italic; font-weight: 300; color: var(--accent); }
-.pillar-desc {
-  font-size: 14px;
-  color: var(--ink-soft);
-  line-height: 1.65;
+/* ───── METRICS ───── */
+.metrics { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-soft); }
+.metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.metric { padding: 40px 28px; border-right: 1px solid var(--border); position: relative; }
+.metric:last-child { border-right: none; }
+.metric-value { font-family: var(--f-display); font-weight: 300; font-size: 46px; letter-spacing: -0.02em; color: var(--ink); line-height: 1; }
+.metric-value .u { color: var(--accent); font-weight: 400; }
+.metric-label { font-size: 13.5px; color: var(--muted); margin-top: 10px; line-height: 1.4; }
+@media (max-width: 760px) {
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+  .metric:nth-child(2) { border-right: none; }
+  .metric:nth-child(1), .metric:nth-child(2) { border-bottom: 1px solid var(--border); }
 }
 
-/* ───────────────────────── SECTIONS ───────────────────────── */
+/* ───── SECTIONS ───── */
+section.block { padding: 96px 0; }
 .section-tag {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  display: flex; align-items: center; gap: 12px;
+  font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
 }
-.section-tag::before {
-  content: ''; width: 28px; height: 1px;
-  background: var(--accent);
-}
+.section-tag::before { content: ''; width: 26px; height: 1px; background: var(--gold); }
+.section-title { font-family: var(--f-display); font-weight: 300; font-size: clamp(30px, 4vw, 46px); letter-spacing: -0.025em; line-height: 1.1; color: var(--ink); max-width: 760px; }
+.section-title em { font-style: italic; color: var(--accent); }
+.section-desc { font-size: 17px; color: var(--ink-soft); max-width: 640px; margin-top: 22px; }
 
-.section-title {
-  font-family: var(--f-display);
-  font-size: clamp(36px, 5vw, 56px);
-  font-weight: 600;
-  line-height: 1.04;
-  letter-spacing: -0.025em;
-  margin-bottom: 20px;
-  max-width: 18ch;
-}
-.section-title em { font-style: italic; font-weight: 300; color: var(--accent); }
+/* about */
+#profil { background: var(--surface-warm); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.profil-wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: start; }
+.profil-text p { font-size: 16.5px; color: var(--ink-soft); margin-bottom: 18px; line-height: 1.75; }
+.profil-text p b { color: var(--ink); }
+.profil-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow); }
+.profil-card h4 { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 18px; }
+.detail-row { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-bottom: 1px dashed var(--border); font-size: 14.5px; }
+.detail-row:last-child { border-bottom: none; }
+.detail-row .k { color: var(--muted); }
+.detail-row .v { color: var(--ink); font-weight: 500; text-align: right; }
+@media (max-width: 820px) { .profil-wrap { grid-template-columns: 1fr; gap: 40px; } }
 
-.section-desc {
-  font-size: 17px;
-  color: var(--ink-soft);
-  line-height: 1.6;
-  max-width: 620px;
-  font-weight: 300;
+/* expertises */
+.exp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 54px; }
+.exp-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 30px; transition: transform .25s, box-shadow .25s, border-color .25s; position: relative; overflow: hidden;
 }
+.exp-card::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+.exp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
+.exp-card:hover::after { transform: scaleX(1); }
+.exp-icon { width: 42px; height: 42px; border-radius: 10px; background: var(--accent-fade); color: var(--accent); display: grid; place-items: center; margin-bottom: 18px; }
+.exp-icon svg { width: 21px; height: 21px; }
+.exp-title { font-family: var(--f-display); font-size: 22px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 12px; }
+.exp-desc { font-size: 14.5px; color: var(--ink-soft); line-height: 1.6; margin-bottom: 18px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.tag { font-family: var(--f-mono); font-size: 11.5px; padding: 5px 10px; border-radius: 5px; background: var(--bg-alt); color: var(--ink-soft); border: 1px solid var(--border); }
+@media (max-width: 760px) { .exp-grid { grid-template-columns: 1fr; } }
 
-/* ───────────────────────── EXPERTISES (Cloud · RPA · IA) ───────────────────────── */
-#expertises { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 56px;
+/* parcours / timeline */
+#parcours { background: var(--surface-warm); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.timeline { margin-top: 56px; position: relative; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--border-strong), transparent); }
+.tl-item { position: relative; padding-left: 42px; padding-bottom: 44px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: ''; position: absolute; left: 0; top: 5px; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--surface); border: 3px solid var(--accent); box-shadow: 0 0 0 4px var(--surface-warm);
 }
-.expertise-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 36px 32px;
-  transition: all 0.25s;
-  position: relative;
-  overflow: hidden;
-}
-.expertise-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-.expertise-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--border-strong); }
-.expertise-card:hover::before { transform: scaleX(1); }
-.expertise-card.gold::before { background: var(--gold); }
-.expertise-card.emerald::before { background: var(--emerald); }
+.tl-item.muted::before { border-color: var(--muted-soft); }
+.tl-period { font-family: var(--f-mono); font-size: 12.5px; color: var(--accent); letter-spacing: 0.03em; margin-bottom: 6px; }
+.tl-item.muted .tl-period { color: var(--muted); }
+.tl-role { font-family: var(--f-display); font-size: 21px; font-weight: 600; letter-spacing: -0.01em; }
+.tl-org { font-size: 14.5px; color: var(--muted); margin-bottom: 12px; font-weight: 500; }
+.tl-desc { font-size: 15px; color: var(--ink-soft); line-height: 1.7; max-width: 760px; }
+.tl-clients { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.chip { font-size: 12.5px; padding: 4px 11px; border-radius: 20px; background: var(--bg-alt); border: 1px solid var(--border); color: var(--ink-soft); }
+.chip.hl { background: var(--gold-fade); border-color: #ecd9af; color: #8a5f12; font-weight: 500; }
 
-.expertise-icon {
-  width: 56px; height: 56px;
-  border-radius: 12px;
-  background: var(--accent-fade);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 24px;
-  font-size: 26px;
+/* formations */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 54px; }
+.panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-sm); }
+.panel h3 { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 22px; }
+.form-item { padding: 14px 0; border-bottom: 1px dashed var(--border); }
+.form-item:last-child { border-bottom: none; padding-bottom: 0; }
+.form-item .ft { font-weight: 600; font-size: 15.5px; color: var(--ink); }
+.form-item .fs { font-size: 13.5px; color: var(--muted); margin-top: 3px; }
+.cert-list { display: flex; flex-wrap: wrap; gap: 9px; }
+.cert {
+  display: inline-flex; align-items: center; gap: 7px; font-size: 13.5px; font-weight: 500;
+  padding: 8px 14px; border-radius: var(--radius); background: var(--bg-soft); border: 1px solid var(--border); color: var(--ink-soft);
 }
-.expertise-card.gold .expertise-icon { background: var(--gold-fade); }
-.expertise-card.emerald .expertise-icon { background: var(--emerald-fade); }
+.cert .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--emerald); }
+.cert.pending { background: var(--gold-fade); border-color: #ecd9af; color: #8a5f12; }
+.cert.pending .dot { background: var(--gold); }
+@media (max-width: 760px) { .two-col { grid-template-columns: 1fr; } }
 
-.expertise-num {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--muted-soft);
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
+/* ASrobotics callout */
+.callout {
+  margin-top: 30px;
+  background: var(--ink); color: #fff; border-radius: var(--radius-lg);
+  padding: 48px 44px; display: flex; align-items: center; justify-content: space-between; gap: 30px;
+  position: relative; overflow: hidden;
 }
-.expertise-title {
-  font-family: var(--f-display);
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  letter-spacing: -0.02em;
-}
-.expertise-desc {
-  font-size: 14px;
-  color: var(--ink-soft);
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-.expertise-tech {
-  display: flex; flex-wrap: wrap; gap: 6px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-.tech-pill {
-  padding: 4px 10px;
-  background: var(--bg-alt);
-  border-radius: 4px;
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--ink-soft);
-}
+.callout::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 85% 20%, rgba(0,168,204,.22), transparent 55%); }
+.callout-txt { position: relative; max-width: 620px; }
+.callout-tag { font-family: var(--f-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 14px; }
+.callout h3 { font-family: var(--f-display); font-weight: 300; font-size: 30px; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 12px; }
+.callout h3 em { font-style: italic; }
+.callout p { color: #c2ccdb; font-size: 15px; }
+.callout .btn-primary { background: #fff; color: var(--ink); position: relative; white-space: nowrap; }
+.callout .btn-primary:hover { background: var(--accent-soft); color: #fff; }
+@media (max-width: 760px) { .callout { flex-direction: column; align-items: flex-start; padding: 36px 28px; } }
 
-/* ───────────────────────── À PROPOS ───────────────────────── */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 460px;
-  gap: 80px;
-  margin-top: 56px;
-  align-items: start;
-}
-.about-text p {
-  font-size: 16px;
-  color: var(--ink-soft);
-  line-height: 1.78;
-  margin-bottom: 20px;
-}
-.about-text p strong { color: var(--ink); font-weight: 500; }
-.about-text p em { font-style: italic; color: var(--accent); }
+/* footer */
+footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding: 70px 0 40px; }
+.foot-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 40px; margin-bottom: 50px; }
+.foot-brand { font-family: var(--f-display); font-weight: 800; font-size: 24px; letter-spacing: -0.02em; margin-bottom: 14px; }
+.foot-brand span { color: var(--accent); }
+.foot-pitch { font-size: 14.5px; color: var(--muted); max-width: 330px; line-height: 1.65; }
+.foot-col h5 { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-soft); margin-bottom: 16px; }
+.foot-col a { display: block; font-size: 14.5px; color: var(--ink-soft); padding: 6px 0; transition: color .2s, padding-left .2s; }
+.foot-col a:hover { color: var(--accent); padding-left: 4px; }
+.foot-bottom { border-top: 1px solid var(--border); padding-top: 26px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; gap: 30px; } }
 
-.about-stats {
-  background: var(--ink);
-  color: white;
-  border-radius: var(--radius-lg);
-  padding: 44px 36px;
-}
-.about-stats-tag {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--accent-soft);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-}
-.about-stat {
-  padding: 22px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-.about-stat:last-child { border-bottom: none; }
-.about-stat-value {
-  font-family: var(--f-display);
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.025em;
-  margin-bottom: 6px;
-}
-.about-stat-value em { font-style: italic; font-weight: 300; color: var(--accent-soft); }
-.about-stat-label {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  font-family: var(--f-mono);
-  letter-spacing: 0.06em;
-}
-
-/* ───────────────────────── FORMATIONS ───────────────────────── */
-#formations { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.formation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 56px;
-}
-.formation-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 0;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.formation-banner {
-  padding: 32px 36px 28px;
-  background: linear-gradient(135deg, #0a1226 0%, #1a2548 100%);
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-.formation-card.azure .formation-banner {
-  background: linear-gradient(135deg, #0078d4 0%, #00a3ff 100%);
-}
-.formation-banner::after {
-  content: '';
-  position: absolute;
-  bottom: -40px; right: -40px;
-  width: 160px; height: 160px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.05);
-}
-.formation-meta {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-  opacity: 0.8;
-  display: flex; gap: 14px;
-  align-items: center;
-}
-.formation-meta-divider { opacity: 0.4; }
-.formation-title {
-  font-family: var(--f-display);
-  font-size: 32px;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-  margin-bottom: 8px;
-}
-.formation-title em { font-style: italic; font-weight: 300; opacity: 0.8; }
-.formation-subtitle {
-  font-size: 14px;
-  opacity: 0.85;
-  font-weight: 300;
-}
-
-.formation-body { padding: 32px 36px; flex: 1; display: flex; flex-direction: column; }
-.formation-desc {
-  color: var(--ink-soft);
-  font-size: 15px;
-  line-height: 1.65;
-  margin-bottom: 24px;
-}
-.formation-modules {
-  display: flex; flex-direction: column; gap: 10px;
-  margin-bottom: 28px;
-  flex: 1;
-}
-.module-item {
-  display: flex; align-items: flex-start; gap: 12px;
-  font-size: 14px;
-  color: var(--ink-soft);
-}
-.module-num {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--accent);
-  font-weight: 600;
-  padding-top: 3px;
-  flex-shrink: 0;
-  width: 26px;
-}
-.formation-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-}
-.formation-price {
-  font-family: var(--f-display);
-  font-size: 15px;
-  color: var(--muted);
-}
-.formation-price strong { color: var(--ink); font-weight: 600; }
-
-/* ───────────────────────── CV REQUEST ───────────────────────── */
-#cv-access {
-  padding: 120px 0;
-  background: var(--ink);
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
-#cv-access::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(0, 168, 204, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(0, 168, 204, 0.08) 0%, transparent 50%);
-  pointer-events: none;
-}
-#cv-access .container { position: relative; z-index: 1; }
-.cv-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 80px;
-  align-items: center;
-}
-#cv-access .section-tag { color: var(--accent-soft); }
-#cv-access .section-tag::before { background: var(--accent-soft); }
-#cv-access .section-title { color: white; max-width: 14ch; }
-#cv-access .section-title em { color: var(--accent-soft); }
-#cv-access .section-desc { color: rgba(255,255,255,0.75); }
-.cv-features { margin-top: 36px; }
-.cv-feature {
-  display: flex; align-items: center; gap: 14px;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  font-size: 14px;
-  color: rgba(255,255,255,0.85);
-}
-.cv-feature-icon {
-  width: 28px; height: 28px;
-  border-radius: 6px;
-  background: rgba(0, 168, 204, 0.15);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--accent-soft);
-  font-size: 14px;
-  flex-shrink: 0;
-}
-.cv-cta-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: var(--radius-lg);
-  padding: 36px;
-  backdrop-filter: blur(10px);
-}
-.cv-cta-card h4 {
-  font-family: var(--f-display);
-  font-size: 26px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 14px;
-}
-.cv-cta-card p {
-  color: rgba(255,255,255,0.7);
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-#cv-access .btn-primary {
-  background: var(--accent-soft);
-  color: var(--ink);
-  font-weight: 500;
-  width: 100%;
-  justify-content: center;
-  padding: 14px 24px;
-  font-size: 14px;
-}
-#cv-access .btn-primary:hover { background: white; }
-
-/* ───────────────────────── FOOTER ───────────────────────── */
-footer {
-  padding: 56px 0 40px;
-  border-top: 1px solid var(--border);
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 40px;
-}
-.footer-tagline {
-  font-family: var(--f-display);
-  font-size: 17px;
-  color: var(--ink-soft);
-  margin-top: 16px;
-  font-style: italic;
-  font-weight: 300;
-  max-width: 320px;
-  line-height: 1.55;
-}
-.footer-col h5 {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.footer-col ul li { margin-bottom: 10px; }
-.footer-col a {
-  font-size: 13px;
-  color: var(--ink-soft);
-  transition: color 0.15s;
-}
-.footer-col a:hover { color: var(--accent); }
-.footer-bottom {
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-}
-
-/* ───────────────────────── MODAL ───────────────────────── */
-.modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 18, 38, 0.5);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 1000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.25s;
-  padding: 24px;
-}
-.modal-overlay.active { display: flex; opacity: 1; }
-.modal {
-  background: white;
-  border-radius: var(--radius-lg);
-  width: 100%;
-  max-width: 540px;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: var(--shadow-lg);
-  transform: translateY(20px) scale(0.98);
-  transition: transform 0.3s;
-}
-.modal-overlay.active .modal { transform: translateY(0) scale(1); }
-.modal-header {
-  padding: 32px 36px 20px;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-.modal-eyebrow {
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.modal-title {
-  font-family: var(--f-display);
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-.modal-title em { font-style: italic; font-weight: 300; color: var(--accent); }
-.modal-close {
-  position: absolute;
-  top: 24px; right: 24px;
-  width: 32px; height: 32px;
-  border-radius: 8px;
-  background: var(--bg-alt);
-  border: none;
-  font-size: 18px;
-  color: var(--muted);
-  display: flex; align-items: center; justify-content: center;
-  transition: all 0.15s;
-}
-.modal-close:hover { background: var(--ink); color: white; }
-.modal-body { padding: 28px 36px 36px; }
-.modal-body p {
-  color: var(--ink-soft);
-  font-size: 14px;
-  line-height: 1.6;
-  margin-bottom: 24px;
-}
-.form-group { margin-bottom: 18px; }
-.form-label {
-  display: block;
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.form-input, .form-textarea, .form-select {
-  width: 100%;
-  padding: 12px 14px;
-  border: 1px solid var(--border-strong);
-  border-radius: 8px;
-  font-family: var(--f-body);
-  font-size: 14px;
-  color: var(--ink);
-  background: white;
-  transition: border-color 0.15s, box-shadow 0.15s;
-}
-.form-input:focus, .form-textarea:focus, .form-select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px var(--accent-fade);
-}
-.form-textarea { resize: vertical; min-height: 90px; font-family: var(--f-body); }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.modal-submit {
-  width: 100%;
-  padding: 14px;
-  background: var(--ink);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-family: var(--f-body);
-  font-size: 14px;
-  font-weight: 500;
-  margin-top: 8px;
-  transition: background 0.15s, transform 0.1s;
-}
-.modal-submit:hover { background: var(--accent); }
-.modal-submit:active { transform: scale(0.98); }
-.modal-note {
-  margin-top: 14px;
-  font-family: var(--f-mono);
-  font-size: 11px;
-  color: var(--muted);
-  text-align: center;
-}
-
-/* Success state */
-.modal-success {
-  text-align: center;
-  padding: 20px 0;
-}
-.modal-success-icon {
-  width: 64px; height: 64px;
-  border-radius: 16px;
-  background: var(--emerald-fade);
-  color: var(--emerald);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 20px;
-  font-size: 28px;
-}
-.modal-success h4 {
-  font-family: var(--f-display);
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.modal-success p { font-size: 14px; color: var(--ink-soft); }
-
-/* ───────────────────────── REVEAL ANIMATION ───────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* ───────────────────────── RESPONSIVE ───────────────────────── */
-@media (max-width: 900px) {
-  section { padding: 64px 0; }
-  section.hero { padding-top: 132px; }
-  .container { padding: 0 24px; }
-  .hero-pillars { grid-template-columns: 1fr; gap: 32px; }
-  .pillar { padding: 0; padding-top: 24px; border-left: none; border-top: 1px solid var(--border); }
-  .pillar:first-child { border-top: none; padding-top: 0; }
-  .expertise-grid { grid-template-columns: 1fr; }
-  .about-grid, .cv-grid { grid-template-columns: 1fr; gap: 40px; }
-  .formation-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .nav-links { display: none; }
-  .form-row { grid-template-columns: 1fr; }
-}
+/* reveal */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.hero .reveal { transition-duration: .8s; }
+.d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; } .d4 { transition-delay: .32s; }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 </style>
 </head>
 <body>
 
-<!-- ═══════════════════════ NAV ═══════════════════════ -->
-<nav class="topbar">
-  <a href="#" class="brand">
-    <span class="brand-mark">AS</span>
-    <span class="brand-name"><em>AS</em>robotics</span>
-  </a>
+<nav class="topbar" id="nav">
+  <a href="#top" class="brand"><span class="monogram">A<span>S</span></span> Abdelhak Saket</a>
   <div class="nav-links">
+    <a href="#profil">Profil</a>
     <a href="#expertises">Expertises</a>
-    <a href="#about">À propos</a>
-    <a href="#formations">Formations</a>
-    <a href="#cv-access">CV</a>
+    <a href="#parcours">Parcours</a>
+    <a href="asrobotics/">ASrobotics</a>
+    <a href="#contact" class="nav-cta">Me contacter</a>
   </div>
-  <button class="nav-cta" onclick="openModal('contact')">Contact</button>
 </nav>
 
-<!-- ═══════════════════════ HERO ═══════════════════════ -->
+<!-- HERO -->
 <section class="hero" id="top">
   <div class="container">
-    <div class="hero-eyebrow">Cabinet de conseil · Automatisation intelligente</div>
-    <h1 class="hero-headline">
-      <em>Cloud,</em> <em>RPA</em> et <em>IA</em><br>
-      au service de la transformation
-    </h1>
-    <p class="hero-sub">
-      <strong>ASrobotics</strong> conçoit, intègre et opère des solutions d'automatisation intelligente pour les grands comptes <strong>banque, assurance et industrie</strong>. Architecture pragmatique, conformité native, retour sur investissement mesurable.
-    </p>
-    <div class="hero-actions">
-      <button class="btn btn-primary" onclick="openModal('contact')">
-        Nous contacter
-        <span class="btn-arrow">→</span>
-      </button>
-      <a href="#expertises" class="btn btn-ghost">Découvrir nos expertises</a>
-    </div>
-
-    <div class="hero-pillars">
-      <div class="pillar">
-        <div class="pillar-num">01 / Cloud</div>
-        <h3 class="pillar-title">Architecture <em>cloud-native</em></h3>
-        <p class="pillar-desc">Azure, AWS, GCP. Conception et migration vers des architectures sécurisées, scalables et orientées coût.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">02 / RPA</div>
-        <h3 class="pillar-title">Automatisation <em>processus</em></h3>
-        <p class="pillar-desc">UiPath, Blue Prism, Power Automate. Industrialisation des processus métier en mode attended et unattended.</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-num">03 / IA</div>
-        <h3 class="pillar-title">Intelligence <em>générative</em></h3>
-        <p class="pillar-desc">Azure OpenAI, Claude, agents multi-modaux. Du POC à la mise en production sécurisée et conforme.</p>
-      </div>
+    <div class="hero-eyebrow reveal">Chef de Projet Transformation &amp; Digital</div>
+    <h1 class="hero-headline reveal d1">Je pilote des projets <strong>complexes</strong><br>et transverses, de la <span class="accent">vision</span><br>à la <strong>valeur livrée</strong>.</h1>
+    <p class="hero-sub reveal d2">Plus de <b>15 ans d'expérience</b>, dont 12 dans l'IT, au service de grands comptes bancaires et régulés — <b>Caisse d'Épargne, BNP Paribas, EDF, Disneyland Paris</b>. Cadrage stratégique, gouvernance COPIL/COPROJ, conduite du changement, et solutions innovantes par l'<b>automatisation et l'IA</b>.</p>
+    <div class="hero-actions reveal d3">
+      <a href="#contact" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+        Me contacter
+      </a>
+      <a href="https://linkedin.com/in/abdelhaksaket" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V9.99H6v7.01h2.34zM7.17 8.96a1.36 1.36 0 1 0 0-2.72 1.36 1.36 0 0 0 0 2.72zM18 17v-3.84c0-2.05-1.1-3-2.56-3-1.18 0-1.7.65-2 1.1V9.99h-2.34V17h2.34v-3.91c0-.21.02-.42.08-.57.16-.42.54-.85 1.18-.85.83 0 1.16.63 1.16 1.56V17H18z"/></svg>
+        LinkedIn
+      </a>
+      <a href="asrobotics/" class="btn btn-ghost">
+        Voir ASrobotics
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════ EXPERTISES ═══════════════════════ -->
-<section id="expertises">
+<!-- METRICS -->
+<div class="metrics">
   <div class="container">
-    <div class="section-tag">Nos expertises</div>
-    <h2 class="section-title">Trois domaines, <em>une seule</em> ambition&nbsp;: la qualité d'exécution.</h2>
-    <p class="section-desc">
-      Nous combinons trois disciplines complémentaires pour livrer des automatisations qui tiennent en production. Chaque mission s'appuie sur un cadre méthodologique éprouvé et des compétences certifiées.
-    </p>
-
-    <div class="expertise-grid">
-      <div class="expertise-card reveal">
-        <div class="expertise-icon">☁️</div>
-        <div class="expertise-num">01 — Cloud</div>
-        <h3 class="expertise-title">Cloud <em>Engineering</em></h3>
-        <p class="expertise-desc">
-          Architecture, migration et FinOps sur Azure principalement. Infrastructure-as-code, gouvernance, sécurité by design. Pour des SI capables d'absorber la charge IA.
-        </p>
-        <div class="expertise-tech">
-          <span class="tech-pill">Azure</span>
-          <span class="tech-pill">Bicep</span>
-          <span class="tech-pill">Terraform</span>
-          <span class="tech-pill">Azure AI</span>
-          <span class="tech-pill">Key Vault</span>
-          <span class="tech-pill">App Service</span>
-        </div>
-      </div>
-
-      <div class="expertise-card gold reveal">
-        <div class="expertise-icon">🤖</div>
-        <div class="expertise-num">02 — RPA</div>
-        <h3 class="expertise-title">Robotic Process <em>Automation</em></h3>
-        <p class="expertise-desc">
-          Cadrage, développement, déploiement et MCO de robots logiciels. REFramework, Action Center, Orchestrator. Capacité d'industrialisation sur des centaines de processus.
-        </p>
-        <div class="expertise-tech">
-          <span class="tech-pill">UiPath</span>
-          <span class="tech-pill">Blue Prism</span>
-          <span class="tech-pill">Power Automate</span>
-          <span class="tech-pill">Orchestrator</span>
-          <span class="tech-pill">REFramework</span>
-        </div>
-      </div>
-
-      <div class="expertise-card emerald reveal">
-        <div class="expertise-icon">🧠</div>
-        <div class="expertise-num">03 — IA</div>
-        <h3 class="expertise-title">Intelligence <em>Artificielle</em></h3>
-        <p class="expertise-desc">
-          Document Understanding, classification, génération de réponses, agents autonomes. Architectures human-in-the-loop pour environnements régulés.
-        </p>
-        <div class="expertise-tech">
-          <span class="tech-pill">Azure OpenAI</span>
-          <span class="tech-pill">LangGraph</span>
-          <span class="tech-pill">RAG</span>
-          <span class="tech-pill">Document AI</span>
-          <span class="tech-pill">MCP</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ À PROPOS ═══════════════════════ -->
-<section id="about">
-  <div class="container">
-    <div class="section-tag">À propos</div>
-    <h2 class="section-title">Une structure <em>à taille humaine,</em> des résultats à hauteur d'enjeu.</h2>
-    <p class="section-desc">
-      ASrobotics intervient en mode régie ou forfait sur des projets d'automatisation à fort impact. Nos consultants combinent l'expérience grand compte et la culture produit.
-    </p>
-
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          Fondé par <strong>Abdelhak Saket</strong>, consultant senior avec plus de <em>12 ans d'expérience</em> dans l'automatisation pour les grands comptes BFSI, ASrobotics combine la rigueur des environnements régulés à la flexibilité des nouvelles approches agentic.
-        </p>
-        <p>
-          Notre conviction&nbsp;: <strong>la valeur d'une automatisation se mesure dans la durée</strong>. Nous privilégions les architectures simples, documentées et observables, plutôt que les démos brillantes mais fragiles. Chaque livrable inclut son audit, sa documentation et son plan de MCO.
-        </p>
-        <p>
-          Nous travaillons avec des équipes internes plutôt qu'à leur place. Notre objectif est l'autonomie de nos clients, pas la rente du conseil.
-        </p>
-      </div>
-
-      <div class="about-stats reveal">
-        <div class="about-stats-tag">— En chiffres</div>
-        <div class="about-stat">
-          <div class="about-stat-value"><em>12+</em></div>
-          <div class="about-stat-label">Années d'expérience</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-value"><em>200+</em></div>
-          <div class="about-stat-label">Processus automatisés</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-value"><em>15+</em></div>
-          <div class="about-stat-label">Grands comptes BFSI</div>
-        </div>
-        <div class="about-stat">
-          <div class="about-stat-value"><em>4</em></div>
-          <div class="about-stat-label">Certifications éditeur</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ FORMATIONS ═══════════════════════ -->
-<section id="formations">
-  <div class="container">
-    <div class="section-tag">Formations</div>
-    <h2 class="section-title">Transmettre, <em>former,</em> rendre vos équipes autonomes.</h2>
-    <p class="section-desc">
-      Nos formations sont conçues à partir de retours terrain. Format court, exercices pratiques, déploiement de projets réels en fin de parcours. Demande d'accès au programme détaillé sur simple formulaire.
-    </p>
-
-    <div class="formation-grid">
-      <div class="formation-card reveal">
-        <div class="formation-banner">
-          <div class="formation-meta">
-            <span>FORMATION 01</span>
-            <span class="formation-meta-divider">·</span>
-            <span>5 JOURS</span>
-            <span class="formation-meta-divider">·</span>
-            <span>NIVEAU AVANCÉ</span>
-          </div>
-          <h3 class="formation-title">RPA <em>UiPath</em></h3>
-          <p class="formation-subtitle">De l'apprentissage au déploiement industriel</p>
-        </div>
-        <div class="formation-body">
-          <p class="formation-desc">
-            Programme complet pour développeur ou analyste métier. REFramework, intégrations applicatives, Orchestrator, gestion des erreurs et observabilité. Projet final déployé en environnement réel.
-          </p>
-          <div class="formation-modules">
-            <div class="module-item"><span class="module-num">M1</span><span>Studio, sélecteurs et activités essentielles</span></div>
-            <div class="module-item"><span class="module-num">M2</span><span>REFramework et architecture transactionnelle</span></div>
-            <div class="module-item"><span class="module-num">M3</span><span>Orchestrator, queues et gestion d'environnement</span></div>
-            <div class="module-item"><span class="module-num">M4</span><span>Intégration LLM via API (Azure OpenAI)</span></div>
-            <div class="module-item"><span class="module-num">M5</span><span>Projet de fin : automate complet en autonomie</span></div>
-          </div>
-          <div class="formation-footer">
-            <div class="formation-price">À partir de <strong>2 800€ HT</strong></div>
-            <button class="btn btn-primary" onclick="openModal('formation-rpa')">
-              Demander l'accès
-              <span class="btn-arrow">→</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="formation-card azure reveal">
-        <div class="formation-banner">
-          <div class="formation-meta">
-            <span>FORMATION 02</span>
-            <span class="formation-meta-divider">·</span>
-            <span>4 JOURS</span>
-            <span class="formation-meta-divider">·</span>
-            <span>NIVEAU INTERMÉDIAIRE</span>
-          </div>
-          <h3 class="formation-title">Azure <em>AI</em></h3>
-          <p class="formation-subtitle">Intégration et industrialisation IA</p>
-        </div>
-        <div class="formation-body">
-          <p class="formation-desc">
-            Formation orientée production pour développeurs et architectes. Azure OpenAI, AI Foundry, Document Intelligence et patterns agentic. Préparation à la certification AI-103 incluse.
-          </p>
-          <div class="formation-modules">
-            <div class="module-item"><span class="module-num">M1</span><span>Azure OpenAI Service : déploiements et limites</span></div>
-            <div class="module-item"><span class="module-num">M2</span><span>Prompt engineering et function calling</span></div>
-            <div class="module-item"><span class="module-num">M3</span><span>RAG avec Azure AI Search</span></div>
-            <div class="module-item"><span class="module-num">M4</span><span>Agents et orchestration via AI Foundry</span></div>
-            <div class="module-item"><span class="module-num">M5</span><span>Sécurité, gouvernance et observabilité</span></div>
-          </div>
-          <div class="formation-footer">
-            <div class="formation-price">À partir de <strong>2 400€ HT</strong></div>
-            <button class="btn btn-primary" onclick="openModal('formation-azure')">
-              Demander l'accès
-              <span class="btn-arrow">→</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ DEMANDE CV ═══════════════════════ -->
-<section id="cv-access">
-  <div class="container">
-    <div class="cv-grid">
-      <div class="reveal">
-        <div class="section-tag">Curriculum Vitae</div>
-        <h2 class="section-title">Le parcours détaillé <em>du fondateur,</em> sur demande.</h2>
-        <p class="section-desc">
-          Le CV complet d'Abdelhak Saket est mis à disposition au format HTML interactif. Il contient l'historique de mission, les certifications, les références grand compte et les indicateurs de résultat par projet.
-        </p>
-
-        <div class="cv-features">
-          <div class="cv-feature">
-            <div class="cv-feature-icon">⊙</div>
-            <span>12 ans d'expérience documentée chez 15+ grands comptes BFSI</span>
-          </div>
-          <div class="cv-feature">
-            <div class="cv-feature-icon">⊙</div>
-            <span>Certifications UiPath Advanced, Blue Prism AD01, Azure AI</span>
-          </div>
-          <div class="cv-feature">
-            <div class="cv-feature-icon">⊙</div>
-            <span>Format HTML interactif, version PDF disponible sur demande</span>
-          </div>
-          <div class="cv-feature">
-            <div class="cv-feature-icon">⊙</div>
-            <span>Réponse sous 24h ouvrées avec lien d'accès personnalisé</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="cv-cta-card reveal">
-        <h4>Demander l'accès au CV complet</h4>
-        <p>Indiquez votre contexte (recrutement, partenariat, projet client). Nous validons votre demande et vous envoyons un lien d'accès au CV interactif sous 24h.</p>
-        <button class="btn btn-primary" onclick="openModal('cv')">
-          Faire une demande d'accès
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════ FOOTER ═══════════════════════ -->
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="#" class="brand">
-          <span class="brand-mark">AS</span>
-          <span class="brand-name"><em>AS</em>robotics</span>
-        </a>
-        <p class="footer-tagline">L'automatisation intelligente, mesurable et durable.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Expertises</h5>
-        <ul>
-          <li><a href="#expertises">Cloud Engineering</a></li>
-          <li><a href="#expertises">RPA Industrielle</a></li>
-          <li><a href="#expertises">Intelligence Artificielle</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Ressources</h5>
-        <ul>
-          <li><a href="#formations">Formation UiPath</a></li>
-          <li><a href="#formations">Formation Azure AI</a></li>
-          <li><a href="#cv-access">CV du fondateur</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <ul>
-          <li><a href="#" onclick="openModal('contact'); return false;">Demande de devis</a></li>
-          <li><a href="mailto:contact@asrobotics.fr">contact@asrobotics.fr</a></li>
-          <li><a href="#">Île-de-France · Remote</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 ASrobotics. Tous droits réservés.</span>
-      <span>Cabinet de conseil en automatisation intelligente</span>
-    </div>
-  </div>
-</footer>
-
-<!-- ═══════════════════════ MODALS ═══════════════════════ -->
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal" id="modal">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <div class="modal-header">
-      <div class="modal-eyebrow" id="modal-eyebrow">DEMANDE D'ACCÈS</div>
-      <h3 class="modal-title" id="modal-title">Titre</h3>
-    </div>
-    <div class="modal-body" id="modal-body">
-      <!-- Form gets injected by JS -->
+    <div class="metrics-grid">
+      <div class="metric reveal"><div class="metric-value">2<span class="u">M€</span></div><div class="metric-label">de ROI annuel généré sur un programme d'hyperautomation</div></div>
+      <div class="metric reveal d1"><div class="metric-value">+80<span class="u">%</span></div><div class="metric-label">de gain de productivité sur les processus automatisés</div></div>
+      <div class="metric reveal d2"><div class="metric-value">97<span class="u">%</span></div><div class="metric-label">de taux de succès sur 1 500+ dossiers traités</div></div>
+      <div class="metric reveal d3"><div class="metric-value">20<span class="u">+</span></div><div class="metric-label">processus complexes déployés en production</div></div>
     </div>
   </div>
 </div>
 
-<script>
-// ───────────────────────── REVEAL ON SCROLL ─────────────────────────
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12 });
-revealEls.forEach(el => observer.observe(el));
-
-// ───────────────────────── MODAL ─────────────────────────
-const MODAL_CONFIG = {
-  'cv': {
-    eyebrow: 'CV · ACCÈS PROTÉGÉ',
-    title: 'Demande d\'accès au <em>CV complet</em>',
-    intro: 'Le CV interactif d\'Abdelhak Saket sera envoyé à l\'adresse renseignée sous 24h ouvrées, accompagné d\'un lien d\'accès personnalisé.',
-    fields: ['name', 'company', 'email', 'context', 'message'],
-    successMsg: 'Demande reçue. Vous recevrez le lien d\'accès au CV sous 24h ouvrées.'
-  },
-  'formation-rpa': {
-    eyebrow: 'FORMATION 01 · RPA UIPATH',
-    title: 'Programme détaillé <em>RPA UiPath</em>',
-    intro: 'Demandez le programme pédagogique complet, le calendrier des prochaines sessions et les modalités tarifaires (intra-entreprise, inter-entreprise).',
-    fields: ['name', 'company', 'email', 'level', 'message'],
-    successMsg: 'Demande enregistrée. Le programme détaillé vous sera envoyé sous 24h.'
-  },
-  'formation-azure': {
-    eyebrow: 'FORMATION 02 · AZURE AI',
-    title: 'Programme détaillé <em>Azure AI</em>',
-    intro: 'Demandez le programme pédagogique complet, le calendrier des prochaines sessions et les modalités tarifaires (intra-entreprise, inter-entreprise).',
-    fields: ['name', 'company', 'email', 'level', 'message'],
-    successMsg: 'Demande enregistrée. Le programme détaillé vous sera envoyé sous 24h.'
-  },
-  'contact': {
-    eyebrow: 'PRENDRE CONTACT',
-    title: 'Parlons de <em>votre projet</em>',
-    intro: 'Décrivez brièvement votre besoin (cadrage, projet, formation, partenariat). Nous revenons vers vous sous 48h ouvrées.',
-    fields: ['name', 'company', 'email', 'subject', 'message'],
-    successMsg: 'Message envoyé. Nous revenons vers vous sous 48h ouvrées.'
-  }
-};
-
-const FIELD_HTML = {
-  name: '<div class="form-group"><label class="form-label">Nom complet</label><input type="text" class="form-input" name="name" required></div>',
-  company: '<div class="form-group"><label class="form-label">Entreprise</label><input type="text" class="form-input" name="company" required></div>',
-  email: '<div class="form-group"><label class="form-label">Email professionnel</label><input type="email" class="form-input" name="email" required></div>',
-  context: '<div class="form-group"><label class="form-label">Contexte de la demande</label><select class="form-select" name="context" required><option value="">Sélectionner...</option><option>Recrutement (CDI / freelance)</option><option>Partenariat commercial</option><option>Projet client</option><option>Échange professionnel</option><option>Autre</option></select></div>',
-  level: '<div class="form-group"><label class="form-label">Niveau visé</label><select class="form-select" name="level" required><option value="">Sélectionner...</option><option>Débutant — découverte</option><option>Intermédiaire — utilisateur régulier</option><option>Avancé — pro confirmé</option><option>Mixte — équipe hétérogène</option></select></div>',
-  subject: '<div class="form-group"><label class="form-label">Objet</label><input type="text" class="form-input" name="subject" required></div>',
-  message: '<div class="form-group"><label class="form-label">Message (optionnel)</label><textarea class="form-textarea" name="message" placeholder="Quelques précisions sur votre besoin..."></textarea></div>'
-};
-
-function openModal(type) {
-  const config = MODAL_CONFIG[type];
-  if (!config) return;
-
-  document.getElementById('modal-eyebrow').textContent = config.eyebrow;
-  document.getElementById('modal-title').innerHTML = config.title;
-
-  const body = document.getElementById('modal-body');
-  let formHTML = `<p>${config.intro}</p><form id="modal-form" onsubmit="submitForm(event, '${type}'); return false;">`;
-  config.fields.forEach(f => {
-    formHTML += FIELD_HTML[f] || '';
-  });
-  formHTML += `<button type="submit" class="modal-submit">Envoyer la demande</button>`;
-  formHTML += `<p class="modal-note">Vos données ne sont utilisées que pour répondre à votre demande.</p>`;
-  formHTML += `</form>`;
-  body.innerHTML = formHTML;
-
-  document.getElementById('modal-overlay').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('modal-overlay').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-function submitForm(e, type) {
-  e.preventDefault();
-  const form = document.getElementById('modal-form');
-  const data = new FormData(form);
-  const payload = {};
-  data.forEach((v, k) => { payload[k] = v; });
-
-  // Build mailto fallback (works without backend)
-  const subject = encodeURIComponent(`[ASrobotics] ${MODAL_CONFIG[type].eyebrow}`);
-  const bodyText = encodeURIComponent(
-    Object.entries(payload).map(([k, v]) => `${k.toUpperCase()}: ${v}`).join('\n\n')
-  );
-  // Open user's mail client
-  window.location.href = `mailto:contact@asrobotics.fr?subject=${subject}&body=${bodyText}`;
-
-  // Show success state
-  document.getElementById('modal-body').innerHTML = `
-    <div class="modal-success">
-      <div class="modal-success-icon">✓</div>
-      <h4>Demande envoyée</h4>
-      <p>${MODAL_CONFIG[type].successMsg}</p>
+<!-- PROFIL -->
+<section class="block" id="profil">
+  <div class="container">
+    <div class="profil-wrap">
+      <div class="profil-text reveal">
+        <div class="section-tag">Profil</div>
+        <h2 class="section-title">Du cadrage stratégique à la <em>clôture</em> du projet.</h2>
+        <p style="margin-top:28px">Chef de projet habitué à conduire des projets <b>de bout en bout</b> en arbitrant périmètre, planning, budget, risques et bénéfices. Je coordonne des équipes pluridisciplinaires et internationales — IT, Métiers, Data — et je gère les attentes des parties prenantes au sein des instances de gouvernance.</p>
+        <p>Reconnu pour la <b>conduite du changement</b>, le cadrage stratégique (business case, ROI) et la capacité à proposer des solutions innovantes, notamment via l'automatisation et l'intelligence artificielle. Orienté résultats, avec un historique de projets à fort impact mesurable.</p>
+      </div>
+      <div class="profil-card reveal d2">
+        <h4>En bref</h4>
+        <div class="detail-row"><span class="k">Localisation</span><span class="v">Île-de-France, France</span></div>
+        <div class="detail-row"><span class="k">Expérience</span><span class="v">15+ ans · 12 en IT</span></div>
+        <div class="detail-row"><span class="k">Secteurs</span><span class="v">Banque, Assurance,<br>Industrie, Public</span></div>
+        <div class="detail-row"><span class="k">Méthodes</span><span class="v">Agile Scrum · COPIL</span></div>
+        <div class="detail-row"><span class="k">Langues</span><span class="v">FR · EN · AR</span></div>
+        <div class="detail-row"><span class="k">Encadrement</span><span class="v">3 à 8 consultants</span></div>
+      </div>
     </div>
-  `;
-  setTimeout(closeModal, 3500);
-}
+  </div>
+</section>
 
-// Click overlay to close
-document.getElementById('modal-overlay').addEventListener('click', (e) => {
-  if (e.target.id === 'modal-overlay') closeModal();
-});
-// Esc to close
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-});
+<!-- EXPERTISES -->
+<section class="block" id="expertises">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Expertises</div>
+      <h2 class="section-title">Quatre domaines, une approche <em>orientée valeur</em>.</h2>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></div>
+        <h3 class="exp-title">Pilotage &amp; Gouvernance</h3>
+        <p class="exp-desc">Pilotage de bout en bout, arbitrage périmètre/planning/budget/risques, animation COPIL/COPROJ, gestion des parties prenantes et conduite du changement.</p>
+        <div class="tags"><span class="tag">Business case</span><span class="tag">Roadmap</span><span class="tag">ROI</span><span class="tag">AS-IS / TO-BE</span><span class="tag">Agile Scrum</span><span class="tag">PDD / SDD</span></div>
+      </div>
+      <div class="exp-card reveal d1">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3 class="exp-title">IA &amp; GenAI</h3>
+        <p class="exp-desc">Conception de solutions hybrides RPA + LLM : agents autonomes, RAG, traitement intelligent de documents et orchestration de modèles de langage.</p>
+        <div class="tags"><span class="tag">Azure OpenAI</span><span class="tag">LLM · RAG</span><span class="tag">Agents IA</span><span class="tag">LangChain</span><span class="tag">MCP</span><span class="tag">OCR</span><span class="tag">Claude</span></div>
+      </div>
+      <div class="exp-card reveal d2">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3 class="exp-title">RPA &amp; Low-Code</h3>
+        <p class="exp-desc">Automatisation de processus métier critiques, du cadrage au Run, dans le respect des bonnes pratiques d'industrialisation (REFramework).</p>
+        <div class="tags"><span class="tag">UiPath Studio</span><span class="tag">Orchestrator</span><span class="tag">Document Understanding</span><span class="tag">Blue Prism</span><span class="tag">Power Automate</span></div>
+      </div>
+      <div class="exp-card reveal d3">
+        <div class="exp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></div>
+        <h3 class="exp-title">Dev, Cloud &amp; Run</h3>
+        <p class="exp-desc">Développement, intégration et maintien en condition opérationnelle de solutions sur le cloud, avec supervision et gestion d'incidents.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">C#</span><span class="tag">SQL</span><span class="tag">Azure · AWS</span><span class="tag">REST API</span><span class="tag">CI/CD</span><span class="tag">Elasticsearch</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARCOURS -->
+<section class="block" id="parcours">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Parcours</div>
+      <h2 class="section-title">Un fil conducteur : <em>la transformation</em> par la technologie.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-period">Août 2025 — Présent</div>
+        <div class="tl-role">Chef de projet &amp; Consultant Senior R&amp;D Intelligent Automation</div>
+        <div class="tl-org">Indépendant · Île-de-France</div>
+        <div class="tl-desc">Veille et R&amp;D appliquées à l'IA agentique, au RPA et à l'intelligent document processing. Conception de solutions hybrides UiPath + Azure OpenAI, matrices d'éligibilité RPA/IA et modélisation de ROI. Portfolio technique publié sur GitHub.</div>
+        <div class="tl-clients"><span class="chip hl">UiPath</span><span class="chip hl">Azure OpenAI</span><span class="chip">LangChain</span><span class="chip">MCP</span><span class="chip">Python</span></div>
+      </div>
+      <div class="tl-item reveal d1">
+        <div class="tl-period">Janvier 2020 — Juillet 2025</div>
+        <div class="tl-role">Chef de Projet RPA / Consultant Senior</div>
+        <div class="tl-org">Divers cabinets de conseil (ESN) · Île-de-France</div>
+        <div class="tl-desc">Pilotage de bout en bout du cadrage, du développement et du Run de programmes d'automatisation majeurs pour des clients institutionnels. Point fort : un programme d'hyperautomation (UiPath + LLM) générant <b>2 M€ de ROI annuel</b> et 97 % de succès sur 1 500+ dossiers.</div>
+        <div class="tl-clients"><span class="chip hl">Caisse d'Épargne</span><span class="chip hl">BNP Paribas</span><span class="chip hl">EDF</span><span class="chip">Disneyland Paris</span><span class="chip">Académie de Versailles</span><span class="chip">GRDF</span><span class="chip">Docaposte</span><span class="chip">MGEN</span></div>
+      </div>
+      <div class="tl-item reveal d2">
+        <div class="tl-period">Mai 2017 — Décembre 2019</div>
+        <div class="tl-role">Chef de Mission RPA</div>
+        <div class="tl-org">Ernst &amp; Young (EY) &amp; Neolians · Tunisie</div>
+        <div class="tl-desc">Pilotage de projets d'automatisation multi-sectoriels (retail, banque, assurance, transport) pour grands comptes internationaux. Encadrement, recrutement et montée en compétences d'équipes de 3 à 8 consultants UiPath.</div>
+        <div class="tl-clients"><span class="chip">Carrefour</span><span class="chip">BNP Paribas CIB</span><span class="chip">Eurotunnel</span><span class="chip">KPMG</span><span class="chip">DGFiP</span></div>
+      </div>
+      <div class="tl-item muted reveal d3">
+        <div class="tl-period">2006 — 2017</div>
+        <div class="tl-role">Ingénieur Logiciel embarqué &amp; Microélectronique</div>
+        <div class="tl-org">SAGEM Technologies · STMicroelectronics · Tunisie</div>
+        <div class="tl-desc">Conception de solutions logicielles embarquées (C, Python) pour les bancs de test des compteurs Linky, puis conception microélectronique et vérification fonctionnelle de circuits intégrés (VHDL, Verilog).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATIONS -->
+<section class="block">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-tag">Formation &amp; Certifications</div>
+      <h2 class="section-title">Une base d'ingénieur, une <em>spécialisation continue</em>.</h2>
+    </div>
+    <div class="two-col">
+      <div class="panel reveal">
+        <h3>Formation</h3>
+        <div class="form-item">
+          <div class="ft">Ingénieur en Génie Électronique (Bac+5)</div>
+          <div class="fs">École Nationale d'Ingénieurs de Tunis · Accréditation EUR-ACE · 2002–2006</div>
+        </div>
+        <div class="form-item">
+          <div class="ft">Doctorat en Télécommunications <span style="font-weight:400;color:var(--muted)">(interrompu)</span></div>
+          <div class="fs">École Nationale d'Ingénieurs de Tunis · 2011–2014</div>
+        </div>
+      </div>
+      <div class="panel reveal d1">
+        <h3>Certifications</h3>
+        <div class="cert-list">
+          <span class="cert"><span class="dot"></span>Scrum Master I (PSM I)</span>
+          <span class="cert"><span class="dot"></span>Scrum Product Owner I (PSPO I)</span>
+          <span class="cert"><span class="dot"></span>ITIL Foundation</span>
+          <span class="cert"><span class="dot"></span>UiPath Advanced RPA Developer</span>
+          <span class="cert"><span class="dot"></span>UiPath RPA Business Analysis</span>
+          <span class="cert"><span class="dot"></span>Blue Prism Developer (AD01)</span>
+          <span class="cert pending"><span class="dot"></span>Azure Administrator (AZ-104) — en cours</span>
+          <span class="cert pending"><span class="dot"></span>Azure AI Engineer (AI-102) — en cours</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASrobotics callout -->
+    <div class="callout reveal">
+      <div class="callout-txt">
+        <div class="callout-tag">Mon cabinet</div>
+        <h3>Découvrez <em>ASrobotics</em></h3>
+        <p>Conseil en automatisation intelligente — Cloud, RPA et IA pour la transformation des grands comptes BFSI et industrie.</p>
+      </div>
+      <a href="asrobotics/" class="btn btn-primary">
+        Visiter le site
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer id="contact">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="reveal">
+        <div class="foot-brand">Abdelhak <span>Saket</span></div>
+        <p class="foot-pitch">Chef de Projet Transformation &amp; Digital. Disponible pour piloter vos projets de transformation, d'automatisation et d'IA en environnement régulé.</p>
+      </div>
+      <div class="foot-col reveal d1">
+        <h5>Contact</h5>
+        <a href="mailto:abdelhaksaketing@gmail.com">abdelhaksaketing@gmail.com</a>
+        <a href="tel:+33662242313">06 62 24 23 13</a>
+        <a href="https://linkedin.com/in/abdelhaksaket" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="foot-col reveal d2">
+        <h5>Navigation</h5>
+        <a href="#profil">Profil</a>
+        <a href="#expertises">Expertises</a>
+        <a href="#parcours">Parcours</a>
+        <a href="asrobotics/">Site ASrobotics</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Abdelhak Saket — Île-de-France, France</span>
+      <span>abdelhak-saket.github.io</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 20));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // hero reveals on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('in'));
+  });
 </script>
-
 </body>
 </html>
